@@ -16,11 +16,9 @@ public class Wing : MonoBehaviour
     public CoefficientGraph coefficients;
     //Parameters
     private float angleOfAttack;
-    private Vector3 flowVelocity;
-
     public bool centerForce;
+    private Vector3 flowVelocity;
     private Vector3 forcePoint;
-    
 
     void Awake()
     {
@@ -32,7 +30,6 @@ public class Wing : MonoBehaviour
     {
         CalculateLiftAndDrag();
     }
-
     void CalculateLiftAndDrag()
     {
         //Angle of attack for Coefficients
@@ -42,12 +39,12 @@ public class Wing : MonoBehaviour
         float liftCoefficient = coefficients.lift_Coefficient.Evaluate(angleOfAttack); //Evaluates value of Y at X on the coeffiecients graph script
         float dragCoefficient = coefficients.drag_Coefficient.Evaluate(angleOfAttack);
 
-        //Calculate the velocity  flow over wing and angle of attack
+        //Calculate the velocity  flow over wing
         flowVelocity = transform.InverseTransformDirection(rbPlane.GetPointVelocity(transform.position));
         flowVelocity.x = 0f;
 
         //Calculate Lift and Drag Forces        
-        //Lift = 1/2pv^2 * area * coefficient           -density around 1.2kg/m3 at STP
+        //Lift/drag = 1/2pv^2 * wing area * coefficient           -density around 1.2kg/m3 at STP
         lift =  0.5f * 1.2f * flowVelocity.sqrMagnitude * (wingX * wingY) * liftCoefficient * liftFactor * Mathf.Sign(-flowVelocity.y);
         drag = 0.5f * 1.2f * flowVelocity.sqrMagnitude * (wingX * wingY) * dragCoefficient * dragFactor;
 
@@ -55,7 +52,7 @@ public class Wing : MonoBehaviour
         if (centerForce) {forcePoint = rbPlane.transform.TransformPoint(rbPlane.centerOfMass);}
         else {forcePoint = transform.position;}
 
-        //Add force to position                             //lift must be in the up direction (crossing fwd & right does this)
+        //Add force                           //lift must be in the up direction (crossing fwd & right does this)
         rbPlane.AddForceAtPosition(lift * Vector3.Cross(rbPlane.velocity, transform.right).normalized, forcePoint);
         rbPlane.AddForceAtPosition(drag * -rbPlane.velocity.normalized, forcePoint);
     }

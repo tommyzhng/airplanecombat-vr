@@ -35,36 +35,17 @@ public class airplaneControl : MonoBehaviour
     void Update()
 	{
 		DeflectionValues();
+		Thrust();
 		Brake();
 
 	}
 
 	void DeflectionValues()
     {
-		if (elevator != null)
-		{
 			elevator.target = -Vertical;
-		}
-		if (aileronLeft != null)
-		{
 			aileronLeft.target = -Horizontal;
-		}
-		if (aileronRight != null)
-		{
 			aileronRight.target = Horizontal;
-		}
-		if (rudder != null)
-		{
 			rudder.target = Yaw;
-		}
-
-		if (engine != null)
-		{
-			throttle += Input.GetAxis("Fire1") * Time.deltaTime;
-			throttle -= Input.GetAxis("Fire2") * Time.deltaTime;
-			throttle = Mathf.Clamp01(throttle);
-			engine.throttle = throttle;
-		}
 	}
 	//Input
 	public void Axis(InputAction.CallbackContext keyDown)
@@ -85,15 +66,35 @@ public class airplaneControl : MonoBehaviour
 		}
         else
         {
-			Horizontal = 2 * (Mathf.InverseLerp(-Screen.width/2, Screen.width/2, pos.x) - 0.5f);
+			if (!Input.GetMouseButton(0))
+			{
+				Yaw = 0f;
+				Horizontal = 2 * (Mathf.InverseLerp(-Screen.width / 2, Screen.width / 2, pos.x) - 0.5f);
+            }
+            else
+            {
+				Horizontal = 0f;
+				Yaw = 2 * (Mathf.InverseLerp(-Screen.width / 2, Screen.width / 2, pos.x) - 0.5f);
+			}
 			Vertical = 2 * (Mathf.InverseLerp(-Screen.height/2, Screen.height/2, pos.y) - 0.5f);
 		}
 		
-		
+	}
+	public void Thrust()
+    {
+		if (Input.GetKey(KeyCode.LeftShift))
+		{
+			throttle += 1f * Time.deltaTime;
+		}
+		if (Input.GetKey(KeyCode.LeftControl))
+		{
+			throttle -= 1f * Time.deltaTime;
+		}
+		throttle = Mathf.Clamp01(throttle);
+		engine.throttle = throttle;
 	}
 	public void Brake()
     {
-
 		if (Input.GetKey(KeyCode.Space))
         {
 			rightWheel.brakeTorque = 1000f;
@@ -107,14 +108,8 @@ public class airplaneControl : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.P) && ((Rigidbody.velocity.magnitude * 1.94384f) <= 10))
 		{
-			if (!parkBrakeOn)
-            {
-				parkBrakeOn = true;
-			}
-			else if (parkBrakeOn)
-            {
-				parkBrakeOn = false;
-            }
+			if (!parkBrakeOn)	parkBrakeOn = true;
+			else if (parkBrakeOn)	parkBrakeOn = false;
 		}
 		if (parkBrakeOn)
 		{

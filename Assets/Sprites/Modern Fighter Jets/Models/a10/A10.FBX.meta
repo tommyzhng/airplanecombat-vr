@@ -1,0 +1,138 @@
+fileFormatVersion: 2
+guid: d8bef1be723af1849aaaa1f71d3c5fdf
+timeCreated: 1434409035
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: bladesl512
+    100004: bladesr512
+    100006: canopy512
+    100008: canopyint512
+    100010: elevators512
+    100012: fuselage512
+    100014: geardoor512
+    100016: leftaileron512
+    100018: leftrudder512
+    100020: rightaileron512
+    100022: rightrudder512
+    100024: vc512
+    100026: vchud512
+    100028: wheels512
+    400000: //RootNode
+    400002: bladesl512
+    400004: bladesr512
+    400006: canopy512
+    400008: canopyint512
+    400010: elevators512
+    400012: fuselage512
+    400014: geardoor512
+    400016: leftaileron512
+    400018: leftrudder512
+    400020: rightaileron512
+    400022: rightrudder512
+    400024: vc512
+    400026: vchud512
+    400028: wheels512
+    2300000: bladesl512
+    2300002: bladesr512
+    2300004: canopy512
+    2300006: canopyint512
+    2300008: elevators512
+    2300010: fuselage512
+    2300012: geardoor512
+    2300014: leftaileron512
+    2300016: leftrudder512
+    2300018: rightaileron512
+    2300020: rightrudder512
+    2300022: vc512
+    2300024: vchud512
+    2300026: wheels512
+    3300000: bladesl512
+    3300002: bladesr512
+    3300004: canopy512
+    3300006: canopyint512
+    3300008: elevators512
+    3300010: fuselage512
+    3300012: geardoor512
+    3300014: leftaileron512
+    3300016: leftrudder512
+    3300018: rightaileron512
+    3300020: rightrudder512
+    3300022: vc512
+    3300024: vchud512
+    3300026: wheels512
+    4300000: vc512
+    4300002: canopyint512
+    4300004: canopy512
+    4300006: rightaileron512
+    4300008: leftaileron512
+    4300010: elevators512
+    4300012: rightrudder512
+    4300014: leftrudder512
+    4300016: bladesr512
+    4300018: bladesl512
+    4300020: vchud512
+    4300022: wheels512
+    4300024: geardoor512
+    4300026: fuselage512
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

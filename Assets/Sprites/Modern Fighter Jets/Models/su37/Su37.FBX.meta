@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: 413a1aaa7bbbd314b9bb3f7d5afc815e
+timeCreated: 1434409006
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: burnercone512
+    100002: canardl512
+    100004: canardr512
+    100006: canopyGlass512
+    100008: cockpit512
+    100010: elevatorl512
+    100012: elevatorr512
+    100014: enginevecl512
+    100016: enginevecr512
+    100018: flapl512
+    100020: flapr512
+    100022: fuselage512
+    100024: nozzlel512
+    100026: nozzler512
+    100028: rudderl512
+    100030: rudderr512
+    100032: //RootNode
+    100034: vc512
+    100036: vchud512
+    400000: burnercone512
+    400002: canardl512
+    400004: canardr512
+    400006: canopyGlass512
+    400008: cockpit512
+    400010: elevatorl512
+    400012: elevatorr512
+    400014: enginevecl512
+    400016: enginevecr512
+    400018: flapl512
+    400020: flapr512
+    400022: fuselage512
+    400024: nozzlel512
+    400026: nozzler512
+    400028: rudderl512
+    400030: rudderr512
+    400032: //RootNode
+    400034: vc512
+    400036: vchud512
+    2300000: burnercone512
+    2300002: canardl512
+    2300004: canardr512
+    2300006: canopyGlass512
+    2300008: cockpit512
+    2300010: elevatorl512
+    2300012: elevatorr512
+    2300014: enginevecl512
+    2300016: enginevecr512
+    2300018: flapl512
+    2300020: flapr512
+    2300022: fuselage512
+    2300024: nozzlel512
+    2300026: nozzler512
+    2300028: rudderl512
+    2300030: rudderr512
+    2300032: vc512
+    2300034: vchud512
+    3300000: burnercone512
+    3300002: canardl512
+    3300004: canardr512
+    3300006: canopyGlass512
+    3300008: cockpit512
+    3300010: elevatorl512
+    3300012: elevatorr512
+    3300014: enginevecl512
+    3300016: enginevecr512
+    3300018: flapl512
+    3300020: flapr512
+    3300022: fuselage512
+    3300024: nozzlel512
+    3300026: nozzler512
+    3300028: rudderl512
+    3300030: rudderr512
+    3300032: vc512
+    3300034: vchud512
+    4300000: vchud512
+    4300002: vc512
+    4300004: rudderl512
+    4300006: rudderr512
+    4300008: elevatorl512
+    4300010: elevatorr512
+    4300012: flapr512
+    4300014: flapl512
+    4300016: canardl512
+    4300018: canardr512
+    4300020: burnercone512
+    4300022: enginevecr512
+    4300024: nozzler512
+    4300026: enginevecl512
+    4300028: nozzlel512
+    4300030: canopyGlass512
+    4300032: cockpit512
+    4300034: fuselage512
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

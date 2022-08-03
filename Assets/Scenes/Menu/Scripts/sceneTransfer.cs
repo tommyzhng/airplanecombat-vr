@@ -12,16 +12,21 @@ public class sceneTransfer : MonoBehaviour
 
     //Plane Selection
     public GameObject podium;
+    public List<GameObject> planeList;
     private Vector3 podiumDest = new Vector3(-4.5f, 0f, 0f);
     float movePoint = 0f;
     private void Start()
     {
-        //Override anti aliasing
-        QualitySettings.antiAliasing = 3;
+        planeSelection.enabled = false;
     }
-    private void Update()
+    private void FixedUpdate()
     {
-       if (planeSelection.enabled)
+        Podium();
+    }
+    //Podium Functions
+    private void Podium()
+    {
+        if (planeSelection.enabled && movePoint < 1)
         {
             movePoint += 0.25f * Time.deltaTime;
             podium.transform.position = Vector3.Lerp(podium.transform.position, podiumDest, movePoint);
@@ -32,6 +37,10 @@ public class sceneTransfer : MonoBehaviour
     {
         startScreen.enabled = false;
         planeSelection.enabled = true;
+    }
+    public void SpawnTutorial()
+    {
+        SceneManager.LoadScene("tutorial");
     }
 
 }

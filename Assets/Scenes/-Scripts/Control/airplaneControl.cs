@@ -11,6 +11,7 @@ public class airplaneControl : MonoBehaviour
 	private float throttle;
 	public WheelCollider leftWheel;
 	public WheelCollider rightWheel;
+	public WheelCollider frontWheel;
 	private bool parkBrakeOn;
 
 	//Axis
@@ -19,7 +20,8 @@ public class airplaneControl : MonoBehaviour
 	private float Yaw;
 
 	//Control Surface
-	public Surfaces elevator;
+	public Surfaces elevatorLeft;
+    public Surfaces elevatorRight;
 	public Surfaces aileronLeft;
 	public Surfaces aileronRight;
 	public Surfaces rudder;
@@ -29,6 +31,9 @@ public class airplaneControl : MonoBehaviour
 	{
 		Rigidbody = GetComponent<Rigidbody>();
 		parkBrakeOn = true;
+
+		//Wake the wheels
+		frontWheel.motorTorque = 1f;
 	}
 
     // Update is called once per frame
@@ -41,7 +46,8 @@ public class airplaneControl : MonoBehaviour
 	}
 	void DeflectionValues()
     {
-			elevator.target = -Vertical;
+			elevatorLeft.target = -Vertical;
+			elevatorRight.target = -Vertical;
 			aileronLeft.target = -Horizontal;
 			aileronRight.target = Horizontal;
 			rudder.target = Yaw;
@@ -65,7 +71,7 @@ public class airplaneControl : MonoBehaviour
 		}
         else
         {
-			if (!Input.GetMouseButton(0))			//If left mouse button not clicked, use elerons, else, use rudder
+			if (!Input.GetMouseButton(0))			//If left mouse button not clicked, use ailerons, else, use rudder
 			{
 				Yaw = 0f;
 				Horizontal = 2 * (Mathf.InverseLerp(-Screen.width / 2, Screen.width / 2, pos.x) - 0.5f);        //Inverse Lerp gives us how far along the 

@@ -6,7 +6,7 @@ public class Engine : MonoBehaviour
 {
 	[Range(0, 1)]
 	public float throttle;		//Input Throttle
-	private float thrust;        //Total Thrust
+	public float thrust;        //Total Thrust
 
 	public bool canTurnEngineOn;
 	public bool engineOn;
@@ -21,7 +21,6 @@ public class Engine : MonoBehaviour
 	{
 		if (engineOn == false)
         {
-			thrust = 0;
             if (canTurnEngineOn)
             {
 				if (Input.GetKeyDown(KeyCode.E))
@@ -32,10 +31,8 @@ public class Engine : MonoBehaviour
         }
 		else if (engineOn == true)
         {
-			thrust = 20000f;
-        }
-
-		rb.AddRelativeForce(Vector3.forward * thrust * throttle);
+			rb.AddRelativeForce(Vector3.forward * thrust * throttle);
+		}
 	}
 
 }

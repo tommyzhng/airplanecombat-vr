@@ -8,11 +8,12 @@ public class Surfaces : MonoBehaviour
     public float target;
     private float curAngle;
     private float desiredAngle;
+    public float max = 15f;
     //Animate Surfaces
     public Transform planeSurface;
     private Quaternion physicsInitRotation;
     private Quaternion surfaceInitRotation;
-    public float rotationSpeed;
+    public float rotationSpeed = 90;
     void Awake()
     {
         //initial rotation set as default spawned rotation - accessed later to default to these values when let go of keys
@@ -22,7 +23,7 @@ public class Surfaces : MonoBehaviour
 
     void FixedUpdate()
     {
-        desiredAngle = target * 15f;    //target value (decimal) times 15 degrees gives us the desired degree of the rotation
+        desiredAngle = target * max;    //target value (decimal) times 15 degrees gives us the desired degree of the rotation
         curAngle = Mathf.MoveTowardsAngle(curAngle, desiredAngle, rotationSpeed * Time.fixedDeltaTime);
 
         //Physics
@@ -33,7 +34,7 @@ public class Surfaces : MonoBehaviour
         planeSurface.localRotation = surfaceInitRotation;
         if (planeSurface.name != "rudder")
         {
-            planeSurface.Rotate(Vector3.right, curAngle, Space.Self);
+            planeSurface.Rotate(-Vector3.right, curAngle, Space.Self);
         }
         else
         {

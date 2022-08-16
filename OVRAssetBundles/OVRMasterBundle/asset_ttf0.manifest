@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 280154817
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 11f38125a7b064318b98d2cfbe5a7839
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5c012fee17ff0a2fbed210f63d8706e8
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/XROculus/SampleFramework/Core/DebugUI/Fonts/Montserrat/Montserrat-Medium.ttf
+Dependencies: []

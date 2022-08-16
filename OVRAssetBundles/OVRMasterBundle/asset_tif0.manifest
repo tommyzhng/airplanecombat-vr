@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 3705290449
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 93536ff3ac9f6cedc1c80c862fa39e1d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/moss_normal.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/dirt_normal.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/sand_normal.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/sand_mask.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/scree_albedo.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/rock_albedo.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/rock_mask.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/snow_mask.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/sand_albedo.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/screen_normal.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/snow_albedo.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/moss_mask.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/snow_normal.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/scree_mask.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/dirt_mask.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/moss_albedo.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/dirt_albedo.tif
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/rock_normal.tif
+Dependencies: []

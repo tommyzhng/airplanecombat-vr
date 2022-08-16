@@ -1,0 +1,42 @@
+ManifestFileVersion: 0
+CRC: 3636793865
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b29cbe193733b6d2c7009ec8ceed1ade
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 82515b3694a1e5beae009c48c1198c34
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Sprites/Tutorial/EnemyJet/Textures/color.mat
+- Assets/Sprites/jets/Materials/f18cockpit.mat
+- Assets/Sprites/jets/Materials/f16nozzle.mat
+- Assets/Sprites/jets/Materials/hud.mat
+- Assets/Sprites/jets/Materials/aircraftglass.mat
+- Assets/Materials/SkyMaterial.mat
+- Assets/XROculus/SampleFramework/Usage/Locomotion/Materials/DebugDrawLine.mat
+- Assets/Sprites/jets/Joystick/Cockpit F18 Colour.mat
+- Assets/Sprites/Hangar/Materials/Glass.mat
+- Assets/Materials/Water.mat
+- Assets/Sprites/Hangar/Materials/Sheet_metal.mat
+- Assets/XROculus/SampleFramework/Usage/SpatialAnchor/Materials/UIPanelMat.mat
+- Assets/Sprites/jets/Joystick/Textures/JoyStickMaterial.mat
+- Assets/Sprites/Hangar/Materials/Metals_trim.mat
+- Assets/Sprites/jets/Materials/base_f16.mat
+- Assets/Sprites/jets/Materials/base_f18.mat
+- Assets/Sprites/Hangar/Materials/Concret_floor_wet.mat
+- Assets/Sprites/jets/Materials/f16cockpit.mat
+- Assets/XROculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat
+- Assets/Sprites/jets/Materials/aircraftglassint.mat
+Dependencies:
+- C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_png0
+- C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_psd0

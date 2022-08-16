@@ -1,0 +1,44 @@
+ManifestFileVersion: 0
+CRC: 2585286450
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e6f60d7a3352ec42f6d5e04eb50371d8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 300582fe6972e589f8704ad85db49df6
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3863570e7e6387a40ae4f323d83291e5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ad074644ff568a14187a3690cfbd7534, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/XROculus/Interaction/Runtime/Resources/Shaders/Imposter_AlphaCutout.shader
+- Assets/XROculus/Interaction/Runtime/Resources/Shaders/Imposter_AlphaToMask.shader
+- Assets/Resources/OVRBuildConfig.asset
+- Assets/XROculus/VR/Resources/OVRMRUnlitTransparent.shader
+- Assets/XROculus/Interaction/Runtime/Resources/Shaders/UIOverlay.shader
+- Assets/Resources/ONSPSettings.asset
+- Assets/XROculus/VR/Resources/OVRMRUnlit.shader
+- Assets/XROculus/Interaction/Runtime/Resources/Shaders/DepthOverwrite.shader
+- Assets/Resources/OculusRuntimeSettings.asset
+- Assets/XROculus/VR/Resources/OVRMRCameraFrame.shader
+- Assets/XROculus/VR/Resources/OVRMRCameraFrameLit.shader
+- Assets/XROculus/Interaction/Runtime/Resources/Shaders/UnderlayTransparentOccluderImposter.shader
+- Assets/XROculus/VR/Resources/Cubemap Blit.shader
+- Assets/XROculus/VR/Resources/Underlay Impostor.shader
+- Assets/XROculus/Interaction/Runtime/Resources/Shaders/Imposter_AlphaBlended.shader
+- Assets/XROculus/Interaction/Runtime/Resources/Shaders/Imposter_Underlay.shader
+- Assets/XROculus/VR/Resources/Underlay Transparent Occluder.shader
+- Assets/XROculus/Interaction/Runtime/Resources/Shaders/Imposter_Opaque.shader
+- Assets/XROculus/Interaction/Runtime/Resources/Shaders/Imposter_Underlay_AA.shader
+- Assets/Resources/OVRPlatformToolSettings.asset
+- Assets/XROculus/VR/Resources/Texture2D Blit.shader
+- Assets/XROculus/VR/Resources/Unlit Transparent Color.shader
+Dependencies: []

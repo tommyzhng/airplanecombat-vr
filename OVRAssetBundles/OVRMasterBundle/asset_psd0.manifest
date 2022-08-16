@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 341133305
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5cb20b02f78f3b51f2b3cabc9a8b0bf2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Sprites/Tutorial/EnemyJet/Textures/color.psd
+Dependencies: []

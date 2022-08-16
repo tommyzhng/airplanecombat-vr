@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 3374984089
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bb0e33560ac9a4d5568dcfc5323ad618
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0b1b996afefcdb43727f3042384e65d2
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 1953259897
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainLayers/rock.terrainlayer
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainLayers/snow.terrainlayer
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainLayers/sand.terrainlayer
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainLayers/scree.terrainlayer
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainLayers/dirt.terrainlayer
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainLayers/moss.terrainlayer
+Dependencies:
+- C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_tif0

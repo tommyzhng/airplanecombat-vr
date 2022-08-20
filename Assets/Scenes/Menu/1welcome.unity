@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.49394804, g: 0.51807487, b: 0.5660378, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 700b6642665c98349bbbf44214eaf480, type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: a202657a7afed9d4a979ab5ce3c55803, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: d7079f6a6f4dd3d4793cb63584ef4976, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2

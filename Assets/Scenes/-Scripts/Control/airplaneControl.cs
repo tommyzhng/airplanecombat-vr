@@ -134,5 +134,6 @@ public class airplaneControl : MonoBehaviour
 		const float msToKnots = 1.94384f;
 		GUI.Label(new Rect(10, 40, 300, 20), string.Format("Speed: {0:0.0} knots", Rigidbody.velocity.magnitude * msToKnots));
 		GUI.Label(new Rect(10, 60, 300, 20), string.Format("Throttle: {0:0.0}%", throttle * 100.0f));
+		GUI.Label(new Rect(10, 80, 300, 20), string.Format("FPS: {0:0.0}", 1 / Time.deltaTime));
 	}
 }

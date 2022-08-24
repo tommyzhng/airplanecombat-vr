@@ -86,7 +86,7 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Desktop",
                     "action": "ControlKb",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -97,7 +97,7 @@
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Desktop",
                     "action": "ControlKb",
                     "isComposite": false,
                     "isPartOfComposite": true

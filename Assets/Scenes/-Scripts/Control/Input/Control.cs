@@ -108,7 +108,7 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Desktop"",
                     ""action"": ""ControlKb"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -119,7 +119,7 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Desktop"",
                     ""action"": ""ControlKb"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true

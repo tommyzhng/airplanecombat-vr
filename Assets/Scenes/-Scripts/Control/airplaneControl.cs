@@ -6,14 +6,15 @@ using System;
 
 public class airplaneControl : MonoBehaviour
 {
-	//Movement
+	//Input
+	private JoystickRotation jsRotation;
 	public Engine engine;
+	//Movement
 	private float throttle;
 	public WheelCollider leftWheel;
 	public WheelCollider rightWheel;
 	public WheelCollider frontWheel;
 	private bool parkBrakeOn;
-
 	//Axis
 	private float Vertical;
 	private float Horizontal;
@@ -111,7 +112,7 @@ public class airplaneControl : MonoBehaviour
 			leftWheel.brakeTorque = 0f;
 		}
 
-		if (Input.GetKeyDown(KeyCode.P) && ((Rigidbody.velocity.magnitude * 1.94384f) <= 10))
+		if (Input.GetKeyDown(KeyCode.P))
 		{
 			if (!parkBrakeOn)	parkBrakeOn = true;
 			else if (parkBrakeOn)	parkBrakeOn = false;

@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 721673516
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ef8e37b9cb85efee8e5333de7de1b36c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Sprites/Water/Textures/AQUAS_Foam.jpg
+Dependencies: []

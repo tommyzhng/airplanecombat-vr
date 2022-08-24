@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 544279669
+CRC: 1635216154
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b917fc63048fcfa58ec59d537e9bf219
+    Hash: 5f69bb61448f7642d2502a1dd1dda200
   TypeTreeHash:
     serializedVersion: 2
-    Hash: e7b3ea8ced2aca64f32cbc2fc147a091
+    Hash: aa25b81663e436a32ee791347023577f
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -78,6 +78,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 1c79ca230b752ed4689dbf9e2583b1b7, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 79b7e65854ace8f44b05c52c6e824354, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 39fa3d8997a24136984ca6e2c99902bc, type: 3}
@@ -113,6 +115,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 258
   Script: {instanceID: 0}
+- Class: 850595691
+  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Scenes/Menu/1welcome.unity
@@ -121,6 +125,7 @@ Dependencies:
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_exr0
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_fbx0
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_inputactions0
+- C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_lighting0
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_mat0
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_png0
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_prefab0

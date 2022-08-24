@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1984285991
+CRC: 3826176642
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d70a7f48dcd35514b83438c75292200f
+    Hash: 442bbc35483233c7a68f631093458b07
   TypeTreeHash:
     serializedVersion: 2
     Hash: 4136b6c1b05d5713b8a3c845845ff3ed
@@ -23,11 +23,11 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Scenes/Tutorial/Terrain/TerrainData_316d3ab8-d4a5-41a3-b8f5-67f042cd07b2.asset
-- Assets/Scenes/Tutorial/Terrain/TerrainData_4cc6d88a-a1ae-4471-8341-0480f3d00ca7.asset
+- Assets/Scenes/Tutorial/Terrain/Data/TerrainData_316d3ab8-d4a5-41a3-b8f5-67f042cd07b2.asset
+- Assets/Scenes/Tutorial/Terrain/Data/TerrainData_4cc6d88a-a1ae-4471-8341-0480f3d00ca7.asset
 - Assets/Scenes/-Scripts/Aero/Coeffiecients/Wing2Coefficients.asset
-- Assets/Scenes/Tutorial/Terrain/Terrain_0_0_2caca9d6-ff04-4a5c-a914-577492885c01.asset
-- Assets/Scenes/Tutorial/Terrain/TerrainData_94dac726-5cf6-49c1-99d0-7db1c3845245.asset
+- Assets/Scenes/Tutorial/Terrain/Data/Terrain_0_0_2caca9d6-ff04-4a5c-a914-577492885c01.asset
+- Assets/Scenes/Tutorial/Terrain/Data/TerrainData_94dac726-5cf6-49c1-99d0-7db1c3845245.asset
 - Assets/Scenes/-Scripts/Aero/Coeffiecients/F16.asset
 Dependencies:
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_terrainlayer0

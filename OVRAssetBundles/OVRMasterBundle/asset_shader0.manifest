@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1697899075
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ee29fc3faa874da070879aac6a81a005
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1848cfd019ebe6ef89967c6f90f2a3d4
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Sprites/Water/Shaders/AQUAS-Lite_Backface.shader
+- Assets/Sprites/Water/Shaders/AQUAS-Lite_Frontface.shader
+Dependencies: []

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3636793865
+CRC: 1158708728
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b29cbe193733b6d2c7009ec8ceed1ade
+    Hash: b614e9f5e388f15c36df6bbd2a48ff48
   TypeTreeHash:
     serializedVersion: 2
     Hash: 82515b3694a1e5beae009c48c1198c34
@@ -18,6 +18,7 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Sprites/Tutorial/EnemyJet/Textures/color.mat
+- Assets/Sprites/Water/Materials/AQUAS_Lite_Water_Backface.mat
 - Assets/Sprites/jets/Materials/f18cockpit.mat
 - Assets/Sprites/jets/Materials/f16nozzle.mat
 - Assets/Sprites/jets/Materials/hud.mat
@@ -26,17 +27,22 @@ Assets:
 - Assets/XROculus/SampleFramework/Usage/Locomotion/Materials/DebugDrawLine.mat
 - Assets/Sprites/jets/Joystick/Cockpit F18 Colour.mat
 - Assets/Sprites/Hangar/Materials/Glass.mat
-- Assets/Materials/Water.mat
+- Assets/Sprites/Water/Materials/AQUAS_Lite_Water.mat
 - Assets/Sprites/Hangar/Materials/Sheet_metal.mat
 - Assets/XROculus/SampleFramework/Usage/SpatialAnchor/Materials/UIPanelMat.mat
 - Assets/Sprites/jets/Joystick/Textures/JoyStickMaterial.mat
 - Assets/Sprites/Hangar/Materials/Metals_trim.mat
+- Assets/Scenes/Tutorial/Terrain/Terrain Assets/TerrainTextures/Materials/concrete.mat
 - Assets/Sprites/jets/Materials/base_f16.mat
+- Assets/Sprites/Water/Models/Materials/WaterSimpleDaylight.mat
 - Assets/Sprites/jets/Materials/base_f18.mat
 - Assets/Sprites/Hangar/Materials/Concret_floor_wet.mat
 - Assets/Sprites/jets/Materials/f16cockpit.mat
 - Assets/XROculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat
 - Assets/Sprites/jets/Materials/aircraftglassint.mat
 Dependencies:
+- C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_jpg0
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_png0
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_psd0
+- C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_tif0

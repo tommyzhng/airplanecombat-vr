@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2257237504
+CRC: 2342234904
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 449c1e195b4cad761c66367a923e0831
+    Hash: 854197539caba18f24edd10f3d115ad8
   TypeTreeHash:
     serializedVersion: 2
-    Hash: a485c1f82b3678547f4ebafa2523646b
+    Hash: 3b0fb61d873331dfbf3678bd66b51573
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -33,6 +33,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 65
   Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
 - Class: 90
   Script: {instanceID: 0}
 - Class: 95
@@ -44,31 +48,37 @@ ClassTypes:
 - Class: 108
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 0294cf6ab82668142b65a8af47752f8c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 36c37e8c3d63da540b679fc6e0cebee0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0ca34a6148db2d54493f84f379293f33, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 18d52e875f660c7409800f5fa7811621, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: e67599361e051fb4297c38e8fbd45473, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 143a3ae238aaeef41936c969741acfc8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1c79ca230b752ed4689dbf9e2583b1b7, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 39fa3d8997a24136984ca6e2c99902bc, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: e33b100f85ff6c74cbc6877ceaff12b3, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 1a8672f4de873704da5bcccee1135796, type: 3}
+  Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 83bd00db5e04ed5409b4f1616637108f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a949dd92fc1c24e4a8e468198e5ca0d0, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 136
@@ -83,15 +93,11 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 196
   Script: {instanceID: 0}
-- Class: 213
+- Class: 215
   Script: {instanceID: 0}
 - Class: 218
   Script: {instanceID: 0}
-- Class: 222
-  Script: {instanceID: 0}
-- Class: 223
-  Script: {instanceID: 0}
-- Class: 224
+- Class: 258
   Script: {instanceID: 0}
 - Class: 850595691
   Script: {instanceID: 0}
@@ -102,8 +108,8 @@ Assets:
 - Assets/Scenes/Tutorial/tutorial.unity
 Dependencies:
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_asset0
+- C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_exr0
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_fbx0
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_lighting0
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_mat0
-- C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_png0
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_prefab0

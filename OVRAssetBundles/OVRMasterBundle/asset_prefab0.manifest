@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3250525246
+CRC: 1512916780
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 25f43b39b22f2b58e2a3aff7b10ac0ab
+    Hash: c0c63386a0b195384e4384067d91a65c
   TypeTreeHash:
     serializedVersion: 2
-    Hash: e2074bd28e8f60018b76f1dec6b94e33
+    Hash: 7cb1155c820905373541c13b74676ea8
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -42,6 +42,10 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 0294cf6ab82668142b65a8af47752f8c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 36c37e8c3d63da540b679fc6e0cebee0, type: 3}
@@ -61,6 +65,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: ef803169364cc6e4d9b4df31d9c7fed7, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: e67599361e051fb4297c38e8fbd45473, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1c79ca230b752ed4689dbf9e2583b1b7, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 79b7e65854ace8f44b05c52c6e824354, type: 3}
 - Class: 114
@@ -82,6 +88,8 @@ ClassTypes:
 - Class: 137
   Script: {instanceID: 0}
 - Class: 146
+  Script: {instanceID: 0}
+- Class: 215
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers:
 - AssemblyName: Unity.InputSystem
@@ -105,11 +113,14 @@ Assets:
 - Assets/XROculus/SampleFramework/Core/CustomHands/Models/HandPoseDefaultPf.prefab
 - Assets/XROculus/SampleFramework/Core/CustomHands/CustomHandRight.prefab
 - Assets/Sprites/Hangar/Prefabs/Hangar_part_03.prefab
+- Assets/Sprites/Water/Prefabs/WaterPlane.prefab
 - Assets/Sprites/Hangar/Prefabs/Hangar_part_01.prefab
 - Assets/Sprites/Hangar/Prefabs/Hangar_part_05.prefab
 - Assets/Sprites/Hangar/Prefabs/Hangar_part_04.prefab
+- Assets/Sprites/jets/Prefabs/F18.prefab
 - Assets/Sprites/Hangar/Prefabs/Floor.prefab
 - Assets/XROculus/VR/Prefabs/OVRCameraRig.prefab
+- Assets/Sprites/jets/Joystick/JoySticks.prefab
 Dependencies:
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_asset0
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_blend0

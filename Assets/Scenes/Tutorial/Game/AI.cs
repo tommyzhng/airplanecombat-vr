@@ -4,16 +4,14 @@ using UnityEngine;
 public class AI : MonoBehaviour
 {
     public GameObject player;
-
     //Waypoints
     public List<Transform> waypoints = new List<Transform>();
     private Transform curWaypoint;
     private Transform nextWaypoint;
+    private Vector3 currWp;
+    private Vector3 nextWp;
     private int waypointIndex = 0;
     private float lerpStep;
-
-    Vector3 currWp;
-    Vector3 nextWp;
 
     //Turning
     float curDirection;
@@ -23,7 +21,10 @@ public class AI : MonoBehaviour
     //Other Mechanics
     public float speed = 50f;
     bool offGround = false;
-
+    private void Start()
+    {
+        player = GameObject.Find("plane");
+    }
     void Update()
 	{
         if (player.transform.position.y > 8 && offGround == false)
@@ -34,7 +35,6 @@ public class AI : MonoBehaviour
         {
             CalculateWaypoint();
         }
-        
     }
     void CalculateWaypoint()
     {

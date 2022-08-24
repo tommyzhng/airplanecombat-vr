@@ -16,15 +16,20 @@ public class sceneTransfer : MonoBehaviour
     public List<GameObject> planeList;
     private int planeIndex = 0;
 
-    public Button next;
-    public Button prev;
-
     private void Start()
     {
         planeSelection.enabled = false;
-
     }
-    //Podium Functions
+    //When start menu clicked
+    public void startGame()
+    {
+        startScreen.enabled = false;
+        planeSelection.enabled = true;
+
+        StartCoroutine(MoveIn(podium, new Vector3(-4.5f, 0f, 0f)));
+        StartCoroutine(MoveIn(planeList[planeIndex], new Vector3(-4.5f, 1.25f, 0f)));
+    }
+    //Next Plane
     public void NextPlane()
     {
         StopAllCoroutines();
@@ -33,6 +38,7 @@ public class sceneTransfer : MonoBehaviour
         StartCoroutine(MoveIn(planeList[planeIndex], new Vector3(-4.5f, 1.25f, 0f)));
 
     }
+    //Previous Plane
     public void PrevPlane()
     {
         StopAllCoroutines();
@@ -47,7 +53,7 @@ public class sceneTransfer : MonoBehaviour
         }
         StartCoroutine(MoveIn(planeList[planeIndex], new Vector3(-4.5f, 1.25f, 0f)));
     }
-
+    //Action of animating in the plane
     public IEnumerator MoveIn(GameObject item, Vector3 dest)
     {
         float movePoint = 0f;
@@ -58,6 +64,7 @@ public class sceneTransfer : MonoBehaviour
         }
         movePoint = 0f;
     }
+    //Action of animating out the plane
     public IEnumerator MoveOut(GameObject item)
     {
         Vector3 dest = new Vector3(-31.24f, 0f, 6.75f);
@@ -70,20 +77,12 @@ public class sceneTransfer : MonoBehaviour
         move = 0f;
     }
 
-    //When start button is clicked
-    public void startGame()
-    {
-        startScreen.enabled = false;
-        planeSelection.enabled = true;
-
-        StartCoroutine(MoveIn(podium, new Vector3(-4.5f, 0f, 0f)));
-        StartCoroutine(MoveIn(planeList[planeIndex], new Vector3(-4.5f, 1.25f, 0f)));
-    }
-
-    //When tutorial clicked
+    //When confirm button clicked
     public void SpawnTutorial()
     {
+        PlayerPrefs.SetInt("selectedPlane", planeIndex);
         SceneManager.LoadScene("tutorial");
+        
     }
 
 }

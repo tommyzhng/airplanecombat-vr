@@ -1,35 +1,34 @@
 ManifestFileVersion: 0
-CRC: 1953710966
+CRC: 3262432431
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: asset_resources
       Dependencies: {}
     Info_1:
-      Name: scene_1welcome
+      Name: scene_tutorial
       Dependencies:
-        Dependency_0: asset_png0
+        Dependency_0: asset_prefab0
         Dependency_1: asset_fbx0
         Dependency_2: asset_mat0
-        Dependency_3: asset_prefab0
-        Dependency_4: asset_lighting0
-        Dependency_5: asset_blend0
-        Dependency_6: asset_ttf0
-        Dependency_7: asset_exr0
-        Dependency_8: asset_inputactions0
+        Dependency_3: asset_fbx0
+        Dependency_4: asset_asset0
+        Dependency_5: asset_controller0
+        Dependency_6: asset_lighting0
+        Dependency_7: asset_blend0
+        Dependency_8: asset_exr0
+        Dependency_9: asset_inputactions0
     Info_2:
-      Name: scene_tutorial
+      Name: asset_prefab0
       Dependencies:
         Dependency_0: asset_fbx0
         Dependency_1: asset_mat0
-        Dependency_2: asset_prefab0
-        Dependency_3: asset_lighting0
-        Dependency_4: asset_asset0
-        Dependency_5: asset_exr0
+        Dependency_2: asset_asset0
+        Dependency_3: asset_blend0
+        Dependency_4: asset_inputactions0
     Info_3:
-      Name: asset_fbx0
-      Dependencies:
-        Dependency_0: asset_mat0
+      Name: asset_tif0
+      Dependencies: {}
     Info_4:
       Name: asset_png0
       Dependencies: {}
@@ -40,58 +39,38 @@ AssetBundleManifest:
     Info_6:
       Name: asset_mat0
       Dependencies:
-        Dependency_0: asset_png0
-        Dependency_1: asset_tif0
+        Dependency_0: asset_tif0
+        Dependency_1: asset_png0
         Dependency_2: asset_psd0
-        Dependency_3: asset_shader0
-        Dependency_4: asset_jpg0
     Info_7:
-      Name: asset_prefab0
+      Name: asset_fbx0
       Dependencies:
-        Dependency_0: asset_fbx0
-        Dependency_1: asset_fbx0
-        Dependency_2: asset_mat0
-        Dependency_3: asset_controller0
-        Dependency_4: asset_blend0
-        Dependency_5: asset_asset0
-        Dependency_6: asset_inputactions0
+        Dependency_0: asset_mat0
     Info_8:
-      Name: asset_controller0
-      Dependencies:
-        Dependency_0: asset_fbx0
-    Info_9:
-      Name: asset_lighting0
-      Dependencies: {}
-    Info_10:
-      Name: asset_blend0
-      Dependencies:
-        Dependency_0: asset_png0
-    Info_11:
-      Name: asset_ttf0
-      Dependencies: {}
-    Info_12:
-      Name: asset_asset0
-      Dependencies:
-        Dependency_0: asset_terrainlayer0
-    Info_13:
-      Name: asset_exr0
-      Dependencies: {}
-    Info_14:
-      Name: asset_inputactions0
-      Dependencies: {}
-    Info_15:
-      Name: asset_tif0
-      Dependencies: {}
-    Info_16:
       Name: asset_terrainlayer0
       Dependencies:
         Dependency_0: asset_tif0
-    Info_17:
+    Info_9:
+      Name: asset_asset0
+      Dependencies:
+        Dependency_0: asset_terrainlayer0
+    Info_10:
+      Name: asset_controller0
+      Dependencies:
+        Dependency_0: asset_fbx0
+    Info_11:
+      Name: asset_lighting0
+      Dependencies: {}
+    Info_12:
       Name: asset_psd0
       Dependencies: {}
-    Info_18:
-      Name: asset_shader0
+    Info_13:
+      Name: asset_blend0
+      Dependencies:
+        Dependency_0: asset_png0
+    Info_14:
+      Name: asset_exr0
       Dependencies: {}
-    Info_19:
-      Name: asset_jpg0
+    Info_15:
+      Name: asset_inputactions0
       Dependencies: {}

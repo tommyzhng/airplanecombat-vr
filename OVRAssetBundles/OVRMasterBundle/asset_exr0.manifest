@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4089347202
+CRC: 3448644664
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3ef5f4255e7784088f03f0d4a9f93c32
+    Hash: f0af51245d77badea01556778f33650f
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2c040cef7601b3c05f2f6ecddfcec8c0
@@ -13,6 +13,6 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/Scenes/Tutorial/tutorial/ReflectionProbe-1.exr
 - Assets/Scenes/Tutorial/Lighting/ReflectionProbe-0.exr
-- Assets/Scenes/Menu/1welcome/ReflectionProbe-0.exr
 Dependencies: []

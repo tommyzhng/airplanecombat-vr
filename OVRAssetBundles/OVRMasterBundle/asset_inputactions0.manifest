@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1655638000
+CRC: 2330746669
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c379259d78095f52ec97ae402c42774a
+    Hash: cf8a6096cba6ed7d8f0ffb39ac954b1c
   TypeTreeHash:
     serializedVersion: 2
     Hash: 538d26e2b59c9fed27467efb10686737
@@ -27,6 +27,5 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: Unity.InputSystem
   ClassName: UnityEngine.InputSystem.InputControlScheme/DeviceRequirement
 Assets:
-- Packages/com.unity.inputsystem/InputSystem/Plugins/PlayerInput/DefaultInputActions.inputactions
 - Assets/Scenes/-Scripts/Control/Input/Control.inputactions
 Dependencies: []

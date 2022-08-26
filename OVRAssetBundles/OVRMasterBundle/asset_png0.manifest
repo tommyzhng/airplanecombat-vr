@@ -1,38 +1,24 @@
 ManifestFileVersion: 0
-CRC: 793998980
+CRC: 3219466182
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c9d4f4726769f5360c0a8cb6e6e321b2
+    Hash: 912211b2a0085dd0cadeb72af2e4b52a
   TypeTreeHash:
     serializedVersion: 2
-    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+    Hash: b0363f7088f9761414f730641bf9a24b
 HashAppended: 0
 ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
-- Class: 213
-  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Sprites/Hangar/Textures/Glass/Glass_MaskMap.png
 - Assets/Sprites/jets/Models/f16/f16_normal.png
 - Assets/Sprites/jets/Models/tmats/hud.png
-- Assets/Sprites/Hangar/Textures/Metals_trim/Metals_trim_Metals_trim_BaseMap.png
 - Assets/Sprites/jets/Models/f16/f16_cockpit.png
 - Assets/Sprites/jets/Models/f18/f18-defuse-military.png
-- Packages/com.unity.inputsystem/InputSystem/Editor/Icons/InputSystemUIInputModule@64.png
-- Assets/Sprites/Hangar/Textures/Sheet_metal/Sheet_metal_Normal.png
 - Assets/Sprites/jets/Joystick/Textures/hotas_low_bakes_test_BaseColor.png
 - Assets/Sprites/jets/Models/f18/f18_cockpit.png
-- Assets/Sprites/Hangar/Textures/Concrete_floor/Concrete_floor_smooth_BaseMap.png
-- Assets/XROculus/SampleFramework/Core/DebugUI/Textures/button9slice.png
-- Assets/Sprites/Water/Textures/Waves_HiRes.png
-- Assets/Sprites/Hangar/Textures/Sheet_metal/Sheet_metal_MaskMap.png
-- Assets/Sprites/Hangar/Textures/Glass/Glass_BaseMap.png
-- Assets/Sprites/Hangar/Textures/Metals_trim/Metals_trim_Metals_trim_Normal.png
-- Assets/Sprites/Hangar/Textures/Sheet_metal/Sheet_metal_BaseMap.png
-- Assets/Sprites/Hangar/Textures/Metals_trim/Metals_trim_Metals_trim_MaskMap.png
 - Assets/Sprites/jets/Models/f16/f16nozzle.png
 - Assets/Sprites/jets/Models/tmats/aircraftglassint.png
 - Assets/Sprites/jets/Models/f18/f18_normal.png
@@ -41,7 +27,5 @@ Assets:
 - Packages/com.unity.inputsystem/InputSystem/Editor/Icons/InputAction.png
 - Assets/Sprites/jets/Models/tmats/aircraftglass.png
 - Assets/Sprites/jets/Joystick/Textures/hotas_low_bakes_test_Normal.png
-- Assets/Sprites/Hangar/Textures/Concrete_floor/Concrete_floor_smooth_Normal.png
 - Assets/Sprites/jets/Joystick/Textures/hotas_sketchfab_ao.png
-- Assets/Sprites/Hangar/Textures/Concrete_floor/Concrete_floor_smooth_MaskMap.png
 Dependencies: []

@@ -336,7 +336,6 @@ GameObject:
   - component: {fileID: 680049820184203717}
   - component: {fileID: 2729747935754797209}
   - component: {fileID: 3445327990441748249}
-  - component: {fileID: 118962699}
   m_Layer: 0
   m_Name: JoyStickHandle
   m_TagString: Untagged
@@ -417,24 +416,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &118962699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068098412765428186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _maxGrabPoints: -1
 --- !u!1 &1143944139576429298
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,6 +4558,7 @@ MonoBehaviour:
   leftWheel: {fileID: 6379729782965730060}
   rightWheel: {fileID: 3173895698739808599}
   frontWheel: {fileID: 2447294029063854676}
+  joystick: {fileID: 0}
   elevatorLeft: {fileID: 8572026465329561755}
   elevatorRight: {fileID: 9120864481822881212}
   aileronLeft: {fileID: 1210149188239781580}

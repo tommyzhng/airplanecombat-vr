@@ -7,7 +7,6 @@ using System;
 public class airplaneControl : MonoBehaviour
 {
 	//Input
-	private JoystickRotation jsRotation;
 	public Engine engine;
 	//Movement
 	private float throttle;
@@ -16,6 +15,7 @@ public class airplaneControl : MonoBehaviour
 	public WheelCollider frontWheel;
 	private bool parkBrakeOn;
 	//Axis
+	public JoystickRotation joystick;
 	private float Vertical;
 	private float Horizontal;
 	private float Yaw;
@@ -34,7 +34,7 @@ public class airplaneControl : MonoBehaviour
 		parkBrakeOn = true;
 
 		//Wake the wheels
-		frontWheel.motorTorque = 1f;
+		frontWheel.motorTorque = 1;
 	}
 
     // Update is called once per frame
@@ -43,48 +43,18 @@ public class airplaneControl : MonoBehaviour
 		DeflectionValues();
 		Thrust();
 		Brake();
-
 	}
 	void DeflectionValues()
     {
-			elevatorLeft.target = -Vertical;
-			elevatorRight.target = -Vertical;
-			aileronLeft.target = -Horizontal;
-			aileronRight.target = Horizontal;
-			rudder.target = Yaw;
-	}
-	//Input
-	public void Axis(InputAction.CallbackContext keyDown)
-	{
-		Horizontal = keyDown.ReadValue<Vector3>().x;		//Get values from input actions
-		Vertical = keyDown.ReadValue<Vector3>().y;
-		Yaw = keyDown.ReadValue<Vector3>().z;
-	}
-	public void MouseAxis(InputAction.CallbackContext mousePos)		//Set deflection based on mouse position - more accurate
-    {
-		Vector2 pos = mousePos.ReadValue<Vector2>();				//get vector 2 value from input
-		pos.x -= Screen.width / 2;
-		pos.y -= Screen.height /2;
+		Horizontal = (joystick.transform.localEulerAngles.x > 180) ? joystick.transform.localEulerAngles.x - 360 : joystick.transform.localEulerAngles.x;
+		Vertical = (joystick.transform.localEulerAngles.y > 180) ? joystick.transform.localEulerAngles.y - 360 : joystick.transform.localEulerAngles.y;
+		Yaw = (joystick.transform.localEulerAngles.z > 180) ? joystick.transform.localEulerAngles.z - 360 : joystick.transform.localEulerAngles.z;
 
-		if (pos.x > -150 & pos.x < 150 & pos.y > -10 & pos.y < 10)	//Deadzone where horizontal deflection is zero
-		{
-			Horizontal = 0f;										
-		}
-        else
-        {
-			if (!Input.GetMouseButton(0))			//If left mouse button not clicked, use ailerons, else, use rudder
-			{
-				Yaw = 0f;
-				Horizontal = 2 * (Mathf.InverseLerp(-Screen.width / 2, Screen.width / 2, pos.x) - 0.5f);        //Inverse Lerp gives us how far along the 
-			}                                                                                                   //mouse is between the two values
-			else
-            {
-				Horizontal = 0f;
-				Yaw = 2 * (Mathf.InverseLerp(-Screen.width / 2, Screen.width / 2, pos.x) - 0.5f);
-			}
-			Vertical = 2 * (Mathf.InverseLerp(-Screen.height/2, Screen.height/2, pos.y) - 0.5f);
-		}
-		
+		elevatorLeft.target = -Vertical / joystick.verticalClamp.x;
+		elevatorRight.target = -Vertical / joystick.verticalClamp.x;
+		aileronLeft.target = Horizontal / joystick.horizontalClamp.x;
+		aileronRight.target = -Horizontal / joystick.horizontalClamp.x;
+		rudder.target = Yaw / joystick.yawClamp.x;
 	}
 	public void Thrust()
     {

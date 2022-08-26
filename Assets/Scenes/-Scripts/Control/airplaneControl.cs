@@ -50,11 +50,11 @@ public class airplaneControl : MonoBehaviour
 		Vertical = (joystick.transform.localEulerAngles.y > 180) ? joystick.transform.localEulerAngles.y - 360 : joystick.transform.localEulerAngles.y;
 		Yaw = (joystick.transform.localEulerAngles.z > 180) ? joystick.transform.localEulerAngles.z - 360 : joystick.transform.localEulerAngles.z;
 
-		elevatorLeft.target = -Vertical / joystick.verticalClamp.x;
-		elevatorRight.target = -Vertical / joystick.verticalClamp.x;
-		aileronLeft.target = Horizontal / joystick.horizontalClamp.x;
-		aileronRight.target = -Horizontal / joystick.horizontalClamp.x;
-		rudder.target = Yaw / joystick.yawClamp.x;
+		elevatorLeft.target = -Vertical / joystick.verticalClamp;
+		elevatorRight.target = -Vertical / joystick.verticalClamp;
+		aileronLeft.target = Horizontal / joystick.horizontalClamp;
+		aileronRight.target = -Horizontal / joystick.horizontalClamp;
+		rudder.target = Yaw / joystick.yawClamp;
 	}
 	public void Thrust()
     {

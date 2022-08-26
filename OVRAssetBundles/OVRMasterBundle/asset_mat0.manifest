@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1483826472
+CRC: 4152070556
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9d7a4494e942346d16b511883e7e3245
+    Hash: 7de94bbb103ec81facab0dff959c5a46
   TypeTreeHash:
     serializedVersion: 2
     Hash: 82515b3694a1e5beae009c48c1198c34
@@ -30,6 +30,7 @@ Assets:
 - Assets/Sprites/jets/Materials/base_f16.mat
 - Assets/Sprites/jets/Materials/base_f18.mat
 - Assets/Sprites/jets/Materials/f16cockpit.mat
+- Assets/XROculus/Interaction/Runtime/Materials/Unlit Material.mat
 - Assets/XROculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat
 - Assets/Sprites/jets/Materials/aircraftglassint.mat
 Dependencies:

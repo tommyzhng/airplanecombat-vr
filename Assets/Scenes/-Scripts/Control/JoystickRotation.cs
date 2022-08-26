@@ -1,60 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.InputSystem;
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.InputSystem;
 
 public class JoystickRotation : MonoBehaviour
 {
-	public Vector2 horizontalClamp;
-	public Vector2 verticalClamp;
-	public Vector2 yawClamp;
+
+	public int horizontalClamp;
+	public int verticalClamp;
+	public int yawClamp;
 	public Vector3 rot;
 	//Axis
 	private float horizontal;
 	private float vertical;
 	private float yaw;
+	//Oculus
+	private bool pressed = false;
 
-    private void Awake()
+	private void Awake()
+	{
+		rot = new Vector3(-horizontalClamp, verticalClamp, yawClamp);
+	}
+
+	private void Update()
+	{
+
+	}
+
+    private void OnTriggerStay(Collider other)
     {
-		rot = new Vector3(-horizontalClamp.x, verticalClamp.x, yawClamp.x);
+        if (other.CompareTag("Hand"))
+        {
+			if (pressed)
+			{
+				
+			}
+		}
+		var direction = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z) - transform.position;
+		var rotation = Quaternion.LookRotation(direction);
+
+		rotation.eulerAngles = new Vector3(Mathf.Clamp(rotation.eulerAngles.x, 30, 330), rotation.eulerAngles.y, rotation.eulerAngles.z);
+		transform.rotation = rotation;
 	}
 
-
-    // Update is called once per frame
-
-    public void Axis(InputAction.CallbackContext keyDown)
-	{
-		transform.localEulerAngles = Vector3.Scale(rot, keyDown.ReadValue<Vector3>());        //Get values from input actions
-	}
-
-	public void MouseAxis(InputAction.CallbackContext mousePos)     //Set deflection based on mouse position - more accurate
-	{
-		Vector2 pos = mousePos.ReadValue<Vector2>();                //get vector 2 value from input
-		pos.x -= Screen.width / 2;
-		pos.y -= Screen.height / 2;
-
-		if (!Input.GetMouseButton(0))
-		{
-			yaw = 0f;
-			horizontal = 2 * (Mathf.InverseLerp(-Screen.width / 2, Screen.width / 2, pos.x) - 0.5f);        //Inverse Lerp gives us how far along the 
-		}                                                                                                   //mouse is between the two values
-		else
-		{
-			horizontal = 0f;
-			yaw = 2 * (Mathf.InverseLerp(-Screen.width / 2, Screen.width / 2, pos.x) - 0.5f);
-		}
-		vertical = 2 * (Mathf.InverseLerp(-Screen.height / 2, Screen.height / 2, pos.y) - 0.5f);
-
-		if (pos.x > -150 & pos.x < 150 & pos.y > -10 & pos.y < 10)  //Deadzone where horizontal deflection is zero
-		{
-			transform.localEulerAngles = Vector3.zero;
-		}
-		else
-		{
-			transform.localEulerAngles = Vector3.Scale(new Vector3(horizontal, vertical, yaw), rot);
-		}
-	}
-
-
-
+    public void Grab(InputAction.CallbackContext gripPressed)
+    {
+		pressed = gripPressed.ReadValueAsButton();
+    }
 }
+
+
+

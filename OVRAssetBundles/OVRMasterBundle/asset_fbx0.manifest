@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1916699997
+CRC: 1059052750
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 62004c8138a55d0524f79340611c4ae1
+    Hash: 4361c52ec60863e183921831c8a05888
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 4e507aaf7f0431856d0e2120317b7c8b
+    Hash: a98d58a8768a95ee2296f1aea836a058
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -21,42 +21,13 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
-- Class: 48
-  Script: {instanceID: 0}
-- Class: 74
-  Script: {instanceID: 0}
 - Class: 90
   Script: {instanceID: 0}
 - Class: 95
   Script: {instanceID: 0}
-- Class: 137
-  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/r_hand_cap_touch_thumb_mask_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/r_hand_hold_generic_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/l_hand_hold_generic_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/r_hand_fist_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/r_hand_cap_touch_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/l_hand_relax_mid_fist_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/r_hand_relax_mid_fist_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/r_hand_cap_touch_index_mask_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/r_hand_thumbs_up_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/l_hand_thumbs_up_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/r_hand_hold_ping_pong_ball_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/l_hand_cap_touch_thumb_mask_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/r_hand_relax_3qtr_fist_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Models/r_hand_skeletal_lowres.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/l_hand_relax_3qtr_fist_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/l_hand_cap_touch_index_mask_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/r_hand_pinch_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/l_hand_point_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/l_hand_pinch_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/l_hand_hold_ping_pong_ball_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/r_hand_point_anim.fbx
-- Assets/Sprites/Tutorial/EnemyJet/Prefabs/single rafale.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/l_hand_fist_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Animations/l_hand_cap_touch_anim.fbx
-- Assets/XROculus/SampleFramework/Core/CustomHands/Models/l_hand_skeletal_lowres.fbx
+- Assets/Sprites/jets/Models/f18/F18.FBX
+- Assets/Sprites/jets/Models/f16/F16.FBX
 Dependencies:
 - C:/Users/tommy/Documents/Code/Unity/AirplaneCombatVR/OVRAssetBundles/OVRMasterBundle/asset_mat0

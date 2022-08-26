@@ -44,6 +44,15 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""VrController"",
+                    ""type"": ""Button"",
+                    ""id"": ""13b3c69a-adc8-4953-94a5-e5ed5fd756a1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -134,6 +143,17 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""action"": ""ControlMouse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c8b151f4-53ee-44be-b4db-bc1205a39ae5"",
+                    ""path"": ""<OculusTouchController>/gripPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VrController"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -182,6 +202,7 @@ public partial class @Control : IInputActionCollection2, IDisposable
         m_Plane = asset.FindActionMap("Plane", throwIfNotFound: true);
         m_Plane_ControlKb = m_Plane.FindAction("ControlKb", throwIfNotFound: true);
         m_Plane_ControlMouse = m_Plane.FindAction("ControlMouse", throwIfNotFound: true);
+        m_Plane_VrController = m_Plane.FindAction("VrController", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -243,12 +264,14 @@ public partial class @Control : IInputActionCollection2, IDisposable
     private IPlaneActions m_PlaneActionsCallbackInterface;
     private readonly InputAction m_Plane_ControlKb;
     private readonly InputAction m_Plane_ControlMouse;
+    private readonly InputAction m_Plane_VrController;
     public struct PlaneActions
     {
         private @Control m_Wrapper;
         public PlaneActions(@Control wrapper) { m_Wrapper = wrapper; }
         public InputAction @ControlKb => m_Wrapper.m_Plane_ControlKb;
         public InputAction @ControlMouse => m_Wrapper.m_Plane_ControlMouse;
+        public InputAction @VrController => m_Wrapper.m_Plane_VrController;
         public InputActionMap Get() { return m_Wrapper.m_Plane; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -264,6 +287,9 @@ public partial class @Control : IInputActionCollection2, IDisposable
                 @ControlMouse.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnControlMouse;
                 @ControlMouse.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnControlMouse;
                 @ControlMouse.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnControlMouse;
+                @VrController.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVrController;
+                @VrController.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVrController;
+                @VrController.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVrController;
             }
             m_Wrapper.m_PlaneActionsCallbackInterface = instance;
             if (instance != null)
@@ -274,6 +300,9 @@ public partial class @Control : IInputActionCollection2, IDisposable
                 @ControlMouse.started += instance.OnControlMouse;
                 @ControlMouse.performed += instance.OnControlMouse;
                 @ControlMouse.canceled += instance.OnControlMouse;
+                @VrController.started += instance.OnVrController;
+                @VrController.performed += instance.OnVrController;
+                @VrController.canceled += instance.OnVrController;
             }
         }
     }
@@ -300,5 +329,6 @@ public partial class @Control : IInputActionCollection2, IDisposable
     {
         void OnControlKb(InputAction.CallbackContext context);
         void OnControlMouse(InputAction.CallbackContext context);
+        void OnVrController(InputAction.CallbackContext context);
     }
 }

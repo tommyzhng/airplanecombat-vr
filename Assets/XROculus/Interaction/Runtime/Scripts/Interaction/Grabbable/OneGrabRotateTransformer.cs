@@ -126,7 +126,7 @@ namespace Oculus.Interaction
 
             // Apply this angle rotation about the axis to our transform
             targetTransform.RotateAround(pivot.position, rotationAxis, angleDelta);
-
+            Debug.Log(_grabbable.Transform.localEulerAngles);
             _previousGrabPose = grabPoint;
         }
 

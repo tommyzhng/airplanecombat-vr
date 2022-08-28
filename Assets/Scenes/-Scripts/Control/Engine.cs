@@ -1,49 +1,32 @@
 ﻿//Controls Engine
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Engine : MonoBehaviour
 {
 	[Range(0, 1)]
 	public float throttle;		//Input Throttle
 	public float thrust;        //Total Thrust
-
-	public bool engineOn;
 	public Rigidbody rb;
+	public Text throtDisplay;
 
-    private void Start()
-    {
-		engineOn = false;
-    }
-    private void FixedUpdate()
+	//Rotation Interpretor Variables
+	public ThrottleRotation throttleRotation;
+
+	private void FixedUpdate()
 	{
-		if (engineOn == false)
-        {
-			if (Input.GetKeyDown(KeyCode.E))
-            {
-				engineOn = true;
-            }
-        }
-		else if (engineOn == true)
-        {
-			rb.AddRelativeForce(Vector3.forward * thrust * throttle);
-		}
-		Throttle();
+		RotationInterpretation();
+		throtDisplay.text = (throttle * 100.0f).ToString();
+		rb.AddRelativeForce(Vector3.forward * thrust * throttle);
 	}
-
-	//For Keyboard Control - temporary
-
-	public void Throttle()
+	public void RotationInterpretation()
     {
-		if (Input.GetKey(KeyCode.LeftShift))
-		{
-			throttle += 1f * Time.deltaTime;
-		}
-		if (Input.GetKey(KeyCode.LeftControl))
-		{
-			throttle -= 1f * Time.deltaTime;
-		}
-		throttle = Mathf.Clamp01(throttle);
+		throttle = Mathf.InverseLerp(170, 270, throttleRotation.transform.localEulerAngles.y);
+	}
+    private void OnGUI()
+    {
+		GUI.Label(new Rect(10, 60, 300, 20), string.Format("Throttle: {0:0.0}%", throttle * 100.0f));
 	}
 
 }

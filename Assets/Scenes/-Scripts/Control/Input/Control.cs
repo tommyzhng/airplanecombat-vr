@@ -55,10 +55,28 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""VRLeftGrip"",
+                    ""type"": ""Button"",
+                    ""id"": ""36da3ece-97e3-43a3-b764-b71dc18bdb24"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""VRXTrack"",
                     ""type"": ""Value"",
                     ""id"": ""8b759931-29d9-486f-b0ef-1b81bd27bc1e"",
                     ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Throttle"",
+                    ""type"": ""Value"",
+                    ""id"": ""5539661c-6ac1-448c-bdec-281c3255c88f"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -174,6 +192,50 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""action"": ""VRXTrack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Up/Down"",
+                    ""id"": ""616b5621-fd1e-4ab5-abdb-9143bb1bd4b7"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throttle"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""91483b60-c760-4cb4-8f46-da23b211b56c"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throttle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""09b14399-caf0-4e1b-83e0-a9b8d2c05fb2"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throttle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7862dabb-2e1f-41a8-b192-2dcc051842ab"",
+                    ""path"": ""<OculusTouchController>{LeftHand}/gripPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VRLeftGrip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -185,7 +247,9 @@ public partial class @Control : IInputActionCollection2, IDisposable
         m_Plane_ControlKb = m_Plane.FindAction("ControlKb", throwIfNotFound: true);
         m_Plane_ControlMouse = m_Plane.FindAction("ControlMouse", throwIfNotFound: true);
         m_Plane_VRRightGrip = m_Plane.FindAction("VRRightGrip", throwIfNotFound: true);
+        m_Plane_VRLeftGrip = m_Plane.FindAction("VRLeftGrip", throwIfNotFound: true);
         m_Plane_VRXTrack = m_Plane.FindAction("VRXTrack", throwIfNotFound: true);
+        m_Plane_Throttle = m_Plane.FindAction("Throttle", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -248,7 +312,9 @@ public partial class @Control : IInputActionCollection2, IDisposable
     private readonly InputAction m_Plane_ControlKb;
     private readonly InputAction m_Plane_ControlMouse;
     private readonly InputAction m_Plane_VRRightGrip;
+    private readonly InputAction m_Plane_VRLeftGrip;
     private readonly InputAction m_Plane_VRXTrack;
+    private readonly InputAction m_Plane_Throttle;
     public struct PlaneActions
     {
         private @Control m_Wrapper;
@@ -256,7 +322,9 @@ public partial class @Control : IInputActionCollection2, IDisposable
         public InputAction @ControlKb => m_Wrapper.m_Plane_ControlKb;
         public InputAction @ControlMouse => m_Wrapper.m_Plane_ControlMouse;
         public InputAction @VRRightGrip => m_Wrapper.m_Plane_VRRightGrip;
+        public InputAction @VRLeftGrip => m_Wrapper.m_Plane_VRLeftGrip;
         public InputAction @VRXTrack => m_Wrapper.m_Plane_VRXTrack;
+        public InputAction @Throttle => m_Wrapper.m_Plane_Throttle;
         public InputActionMap Get() { return m_Wrapper.m_Plane; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -275,9 +343,15 @@ public partial class @Control : IInputActionCollection2, IDisposable
                 @VRRightGrip.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRRightGrip;
                 @VRRightGrip.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRRightGrip;
                 @VRRightGrip.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRRightGrip;
+                @VRLeftGrip.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRLeftGrip;
+                @VRLeftGrip.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRLeftGrip;
+                @VRLeftGrip.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRLeftGrip;
                 @VRXTrack.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRXTrack;
                 @VRXTrack.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRXTrack;
                 @VRXTrack.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRXTrack;
+                @Throttle.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnThrottle;
+                @Throttle.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnThrottle;
+                @Throttle.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnThrottle;
             }
             m_Wrapper.m_PlaneActionsCallbackInterface = instance;
             if (instance != null)
@@ -291,9 +365,15 @@ public partial class @Control : IInputActionCollection2, IDisposable
                 @VRRightGrip.started += instance.OnVRRightGrip;
                 @VRRightGrip.performed += instance.OnVRRightGrip;
                 @VRRightGrip.canceled += instance.OnVRRightGrip;
+                @VRLeftGrip.started += instance.OnVRLeftGrip;
+                @VRLeftGrip.performed += instance.OnVRLeftGrip;
+                @VRLeftGrip.canceled += instance.OnVRLeftGrip;
                 @VRXTrack.started += instance.OnVRXTrack;
                 @VRXTrack.performed += instance.OnVRXTrack;
                 @VRXTrack.canceled += instance.OnVRXTrack;
+                @Throttle.started += instance.OnThrottle;
+                @Throttle.performed += instance.OnThrottle;
+                @Throttle.canceled += instance.OnThrottle;
             }
         }
     }
@@ -303,6 +383,8 @@ public partial class @Control : IInputActionCollection2, IDisposable
         void OnControlKb(InputAction.CallbackContext context);
         void OnControlMouse(InputAction.CallbackContext context);
         void OnVRRightGrip(InputAction.CallbackContext context);
+        void OnVRLeftGrip(InputAction.CallbackContext context);
         void OnVRXTrack(InputAction.CallbackContext context);
+        void OnThrottle(InputAction.CallbackContext context);
     }
 }

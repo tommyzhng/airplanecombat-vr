@@ -33,10 +33,28 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "VRLeftGrip",
+                    "type": "Button",
+                    "id": "36da3ece-97e3-43a3-b764-b71dc18bdb24",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "VRXTrack",
                     "type": "Value",
                     "id": "8b759931-29d9-486f-b0ef-1b81bd27bc1e",
                     "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Throttle",
+                    "type": "Value",
+                    "id": "5539661c-6ac1-448c-bdec-281c3255c88f",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -150,6 +168,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "VRXTrack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Up/Down",
+                    "id": "616b5621-fd1e-4ab5-abdb-9143bb1bd4b7",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Throttle",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "91483b60-c760-4cb4-8f46-da23b211b56c",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Throttle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "negative",
+                    "id": "09b14399-caf0-4e1b-83e0-a9b8d2c05fb2",
+                    "path": "<Keyboard>/leftCtrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Throttle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "7862dabb-2e1f-41a8-b192-2dcc051842ab",
+                    "path": "<OculusTouchController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VRLeftGrip",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

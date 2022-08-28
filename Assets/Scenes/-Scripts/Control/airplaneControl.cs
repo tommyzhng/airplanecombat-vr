@@ -7,9 +7,7 @@ using System;
 public class airplaneControl : MonoBehaviour
 {
 	//Input
-	public Engine engine;
 	//Movement
-	private float throttle;
 	public WheelCollider leftWheel;
 	public WheelCollider rightWheel;
 	public WheelCollider frontWheel;
@@ -31,7 +29,7 @@ public class airplaneControl : MonoBehaviour
     private void Awake()
 	{
 		Rigidbody = GetComponent<Rigidbody>();
-		parkBrakeOn = true;
+		parkBrakeOn = false;
 
 		//Wake the wheels
 		frontWheel.motorTorque = 1;
@@ -71,7 +69,7 @@ public class airplaneControl : MonoBehaviour
 			rightWheel.brakeTorque = 1000f;
 			leftWheel.brakeTorque = 1000f;
 		}
-		else if (!parkBrakeOn && engine.engineOn == true && !Input.GetKey(KeyCode.Space))	//if parkbrake not on, engine on, and not pressing space, apply no brake
+		else if (!parkBrakeOn && !Input.GetKey(KeyCode.Space))	//if parkbrake not on, engine on, and not pressing space, apply no brake
         {
 			rightWheel.brakeTorque = 0f;
 			leftWheel.brakeTorque = 0f;
@@ -82,7 +80,6 @@ public class airplaneControl : MonoBehaviour
     {
 		const float msToKnots = 1.94384f;
 		GUI.Label(new Rect(10, 40, 300, 20), string.Format("Speed: {0:0.0} knots", Rigidbody.velocity.magnitude * msToKnots));
-		GUI.Label(new Rect(10, 60, 300, 20), string.Format("Throttle: {0:0.0}%", engine.throttle * 100.0f));
 		GUI.Label(new Rect(10, 80, 300, 20), string.Format("FPS: {0:0.0}", 1 / Time.deltaTime));
 	}
 }

@@ -73,10 +73,10 @@ public class JoystickRotation : MonoBehaviour
 	//Keyboard Control
 	public void Axis(InputAction.CallbackContext keyDown)
 	{
-		transform.localEulerAngles = Vector3.Scale(rot, keyDown.ReadValue<Vector3>());        //Get values from input actions
+		transform.localEulerAngles = Vector3.Scale(rot, keyDown.ReadValue<Vector3>());
 	}
 
-	//Mouse Controll
+	//Mouse Control
 	public void MouseAxis(InputAction.CallbackContext mousePos)     //Set deflection based on mouse position - more accurate
 	{
 		Vector2 pos = mousePos.ReadValue<Vector2>();                //get vector 2 value from input

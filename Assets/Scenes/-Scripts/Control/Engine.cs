@@ -8,31 +8,42 @@ public class Engine : MonoBehaviour
 	public float throttle;		//Input Throttle
 	public float thrust;        //Total Thrust
 
-	public bool canTurnEngineOn;
 	public bool engineOn;
 	public Rigidbody rb;
 
     private void Start()
     {
 		engineOn = false;
-		canTurnEngineOn = true;
     }
     private void FixedUpdate()
 	{
 		if (engineOn == false)
         {
-            if (canTurnEngineOn)
+			if (Input.GetKeyDown(KeyCode.E))
             {
-				if (Input.GetKeyDown(KeyCode.E))
-                {
-					engineOn = true;
-                }
+				engineOn = true;
             }
         }
 		else if (engineOn == true)
         {
 			rb.AddRelativeForce(Vector3.forward * thrust * throttle);
 		}
+		Throttle();
+	}
+
+	//For Keyboard Control - temporary
+
+	public void Throttle()
+    {
+		if (Input.GetKey(KeyCode.LeftShift))
+		{
+			throttle += 1f * Time.deltaTime;
+		}
+		if (Input.GetKey(KeyCode.LeftControl))
+		{
+			throttle -= 1f * Time.deltaTime;
+		}
+		throttle = Mathf.Clamp01(throttle);
 	}
 
 }

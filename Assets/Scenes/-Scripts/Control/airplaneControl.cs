@@ -41,7 +41,6 @@ public class airplaneControl : MonoBehaviour
     void Update()
 	{
 		DeflectionValues();
-		Thrust();
 		Brake();
 	}
 	void DeflectionValues()
@@ -56,31 +55,11 @@ public class airplaneControl : MonoBehaviour
 		aileronRight.target = -Horizontal / joystick.horizontalClamp;
 		rudder.target = Yaw / joystick.yawClamp;
 	}
-	public void Thrust()
-    {
-		if (Input.GetKey(KeyCode.LeftShift))
-		{
-			throttle += 1f * Time.deltaTime;
-		}
-		if (Input.GetKey(KeyCode.LeftControl))
-		{
-			throttle -= 1f * Time.deltaTime;
-		}
-		throttle = Mathf.Clamp01(throttle);
-		engine.throttle = throttle;
-	}
+
 	public void Brake()
     {
-		if (Input.GetKey(KeyCode.Space))
-        {
-			rightWheel.brakeTorque = 1000f;
-			leftWheel.brakeTorque = 1000f;
-		}
-        else
-        {
-			rightWheel.brakeTorque = 0f;
-			leftWheel.brakeTorque = 0f;
-		}
+		if (Input.GetKey(KeyCode.Space)){parkBrakeOn = true; }
+        else if (Input.GetKeyUp(KeyCode.Space)){parkBrakeOn = false; }
 
 		if (Input.GetKeyDown(KeyCode.P))
 		{
@@ -96,7 +75,6 @@ public class airplaneControl : MonoBehaviour
         {
 			rightWheel.brakeTorque = 0f;
 			leftWheel.brakeTorque = 0f;
-			engine.canTurnEngineOn = false;
 		}
 	}
 
@@ -104,7 +82,7 @@ public class airplaneControl : MonoBehaviour
     {
 		const float msToKnots = 1.94384f;
 		GUI.Label(new Rect(10, 40, 300, 20), string.Format("Speed: {0:0.0} knots", Rigidbody.velocity.magnitude * msToKnots));
-		GUI.Label(new Rect(10, 60, 300, 20), string.Format("Throttle: {0:0.0}%", throttle * 100.0f));
+		GUI.Label(new Rect(10, 60, 300, 20), string.Format("Throttle: {0:0.0}%", engine.throttle * 100.0f));
 		GUI.Label(new Rect(10, 80, 300, 20), string.Format("FPS: {0:0.0}", 1 / Time.deltaTime));
 	}
 }

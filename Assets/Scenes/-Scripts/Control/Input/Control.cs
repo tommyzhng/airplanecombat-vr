@@ -46,13 +46,22 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""VrController"",
+                    ""name"": ""VRRightGrip"",
                     ""type"": ""Button"",
-                    ""id"": ""13b3c69a-adc8-4953-94a5-e5ed5fd756a1"",
+                    ""id"": ""768a5ce7-302e-4a67-a762-eb7e8c88d7d1"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""VRXTrack"",
+                    ""type"": ""Value"",
+                    ""id"": ""8b759931-29d9-486f-b0ef-1b81bd27bc1e"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -73,7 +82,7 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Desktop"",
+                    ""groups"": """",
                     ""action"": ""ControlKb"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -84,7 +93,7 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Desktop"",
+                    ""groups"": """",
                     ""action"": ""ControlKb"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -95,7 +104,7 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Desktop"",
+                    ""groups"": """",
                     ""action"": ""ControlKb"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -106,7 +115,7 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Desktop"",
+                    ""groups"": """",
                     ""action"": ""ControlKb"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -117,7 +126,7 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Desktop"",
+                    ""groups"": """",
                     ""action"": ""ControlKb"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -128,7 +137,7 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Desktop"",
+                    ""groups"": """",
                     ""action"": ""ControlKb"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -139,70 +148,44 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Desktop"",
+                    ""groups"": """",
                     ""action"": ""ControlMouse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c8b151f4-53ee-44be-b4db-bc1205a39ae5"",
-                    ""path"": ""<OculusTouchController>/gripPressed"",
+                    ""id"": ""a0fcc0c5-c69b-4e10-8925-e6e75d153cfa"",
+                    ""path"": ""<OculusTouchController>{RightHand}/gripPressed"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""VrController"",
+                    ""action"": ""VRRightGrip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e74963a5-f920-42fb-99b3-39d8f5515930"",
+                    ""path"": ""<OculusTouchController>{RightHand}/thumbstick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VRXTrack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": [
-        {
-            ""name"": ""Desktop"",
-            ""bindingGroup"": ""Desktop"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<Keyboard>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<Mouse>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""VR"",
-            ""bindingGroup"": ""VR"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<OculusHMD>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<OculusTouchController>{LeftHand}"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<OculusTouchController>{RightHand}"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                }
-            ]
-        }
-    ]
+    ""controlSchemes"": []
 }");
         // Plane
         m_Plane = asset.FindActionMap("Plane", throwIfNotFound: true);
         m_Plane_ControlKb = m_Plane.FindAction("ControlKb", throwIfNotFound: true);
         m_Plane_ControlMouse = m_Plane.FindAction("ControlMouse", throwIfNotFound: true);
-        m_Plane_VrController = m_Plane.FindAction("VrController", throwIfNotFound: true);
+        m_Plane_VRRightGrip = m_Plane.FindAction("VRRightGrip", throwIfNotFound: true);
+        m_Plane_VRXTrack = m_Plane.FindAction("VRXTrack", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -264,14 +247,16 @@ public partial class @Control : IInputActionCollection2, IDisposable
     private IPlaneActions m_PlaneActionsCallbackInterface;
     private readonly InputAction m_Plane_ControlKb;
     private readonly InputAction m_Plane_ControlMouse;
-    private readonly InputAction m_Plane_VrController;
+    private readonly InputAction m_Plane_VRRightGrip;
+    private readonly InputAction m_Plane_VRXTrack;
     public struct PlaneActions
     {
         private @Control m_Wrapper;
         public PlaneActions(@Control wrapper) { m_Wrapper = wrapper; }
         public InputAction @ControlKb => m_Wrapper.m_Plane_ControlKb;
         public InputAction @ControlMouse => m_Wrapper.m_Plane_ControlMouse;
-        public InputAction @VrController => m_Wrapper.m_Plane_VrController;
+        public InputAction @VRRightGrip => m_Wrapper.m_Plane_VRRightGrip;
+        public InputAction @VRXTrack => m_Wrapper.m_Plane_VRXTrack;
         public InputActionMap Get() { return m_Wrapper.m_Plane; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -287,9 +272,12 @@ public partial class @Control : IInputActionCollection2, IDisposable
                 @ControlMouse.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnControlMouse;
                 @ControlMouse.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnControlMouse;
                 @ControlMouse.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnControlMouse;
-                @VrController.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVrController;
-                @VrController.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVrController;
-                @VrController.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVrController;
+                @VRRightGrip.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRRightGrip;
+                @VRRightGrip.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRRightGrip;
+                @VRRightGrip.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRRightGrip;
+                @VRXTrack.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRXTrack;
+                @VRXTrack.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRXTrack;
+                @VRXTrack.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRXTrack;
             }
             m_Wrapper.m_PlaneActionsCallbackInterface = instance;
             if (instance != null)
@@ -300,35 +288,21 @@ public partial class @Control : IInputActionCollection2, IDisposable
                 @ControlMouse.started += instance.OnControlMouse;
                 @ControlMouse.performed += instance.OnControlMouse;
                 @ControlMouse.canceled += instance.OnControlMouse;
-                @VrController.started += instance.OnVrController;
-                @VrController.performed += instance.OnVrController;
-                @VrController.canceled += instance.OnVrController;
+                @VRRightGrip.started += instance.OnVRRightGrip;
+                @VRRightGrip.performed += instance.OnVRRightGrip;
+                @VRRightGrip.canceled += instance.OnVRRightGrip;
+                @VRXTrack.started += instance.OnVRXTrack;
+                @VRXTrack.performed += instance.OnVRXTrack;
+                @VRXTrack.canceled += instance.OnVRXTrack;
             }
         }
     }
     public PlaneActions @Plane => new PlaneActions(this);
-    private int m_DesktopSchemeIndex = -1;
-    public InputControlScheme DesktopScheme
-    {
-        get
-        {
-            if (m_DesktopSchemeIndex == -1) m_DesktopSchemeIndex = asset.FindControlSchemeIndex("Desktop");
-            return asset.controlSchemes[m_DesktopSchemeIndex];
-        }
-    }
-    private int m_VRSchemeIndex = -1;
-    public InputControlScheme VRScheme
-    {
-        get
-        {
-            if (m_VRSchemeIndex == -1) m_VRSchemeIndex = asset.FindControlSchemeIndex("VR");
-            return asset.controlSchemes[m_VRSchemeIndex];
-        }
-    }
     public interface IPlaneActions
     {
         void OnControlKb(InputAction.CallbackContext context);
         void OnControlMouse(InputAction.CallbackContext context);
-        void OnVrController(InputAction.CallbackContext context);
+        void OnVRRightGrip(InputAction.CallbackContext context);
+        void OnVRXTrack(InputAction.CallbackContext context);
     }
 }

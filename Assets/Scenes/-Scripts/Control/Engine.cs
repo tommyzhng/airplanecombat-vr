@@ -9,7 +9,6 @@ public class Engine : MonoBehaviour
 	public float throttle;		//Input Throttle
 	public float thrust;        //Total Thrust
 	public Rigidbody rb;
-	public Text throtDisplay;
 
 	//Rotation Interpretor Variables
 	public ThrottleRotation throttleRotation;
@@ -17,7 +16,6 @@ public class Engine : MonoBehaviour
 	private void FixedUpdate()
 	{
 		RotationInterpretation();
-		throtDisplay.text = (throttle * 100.0f).ToString();
 		rb.AddRelativeForce(Vector3.forward * thrust * throttle);
 	}
 	public void RotationInterpretation()

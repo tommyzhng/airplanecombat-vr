@@ -23,7 +23,6 @@ public class JoystickRotation : MonoBehaviour
 	{
 		rot = new Vector3(-horizontalClamp, verticalClamp, yawClamp);
 	}
-
     private void FixedUpdate()
     {
 		if (rPressed & enteredTrigger) { RotateJoystick(); }
@@ -38,8 +37,7 @@ public class JoystickRotation : MonoBehaviour
 	private void RotateJoystick()
     {
 		Vector3 direction = enteredTrigger.transform.position - transform.position;
-		var rotation = Quaternion.LookRotation(direction).eulerAngles;
-		transform.rotation = Quaternion.Euler(rotation);
+		transform.rotation = Quaternion.LookRotation(direction);
 		float x = ((transform.localEulerAngles.x + 540) % 360) - 180;
 		float y = ((transform.localEulerAngles.y + 540) % 360) - 180;
 		float z = (xRightStick * 30);
@@ -69,13 +67,11 @@ public class JoystickRotation : MonoBehaviour
     {
 		xRightStick = x.ReadValue<Vector2>().x;
     }
-
 	//Keyboard Control
 	public void Axis(InputAction.CallbackContext keyDown)
 	{
 		transform.localEulerAngles = Vector3.Scale(rot, keyDown.ReadValue<Vector3>());
 	}
-
 	//Mouse Control
 	public void MouseAxis(InputAction.CallbackContext mousePos)     //Set deflection based on mouse position - more accurate
 	{

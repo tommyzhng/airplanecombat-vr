@@ -571,7 +571,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659290189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1694, y: 0.79999995, z: 1493.7}
+  m_LocalPosition: {x: 1694, y: 1, z: 1493.7}
   m_LocalScale: {x: 5, y: 1, z: 200}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2101,7 +2101,6 @@ MonoBehaviour:
   throttle: 0
   thrust: 40000
   rb: {fileID: 295443999776635353}
-  throtDisplay: {fileID: 1846734126}
   throttleRotation: {fileID: 4460941620099895825}
 --- !u!4 &353606065149650929
 Transform:
@@ -9271,7 +9270,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
+  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -11927,7 +11926,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9144553905975556619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1696.6631, y: 2.95, z: 651.5434}
+  m_LocalPosition: {x: 1696.6631, y: 3.1, z: 651.5434}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: TZN Games
+  companyName: TZNGames
   productName: Airplane Combat VR
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -357,9 +357,7 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 0785813a06a0c29468374ddeba576e1b, type: 2}
   - {fileID: 0}
-  - {fileID: -2432654308785396261, guid: efde087a58e9c05489f19e9f6562746b, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1

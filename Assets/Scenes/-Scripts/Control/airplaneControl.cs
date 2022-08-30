@@ -6,8 +6,7 @@ using System;
 
 public class airplaneControl : MonoBehaviour
 {
-	//Input
-	//Movement
+	//Wheels
 	public WheelCollider leftWheel;
 	public WheelCollider rightWheel;
 	public WheelCollider frontWheel;
@@ -17,8 +16,7 @@ public class airplaneControl : MonoBehaviour
 	private float Vertical;
 	private float Horizontal;
 	private float Yaw;
-
-	//Control Surface
+	//Control Surfaces
 	public Surfaces elevatorLeft;
     public Surfaces elevatorRight;
 	public Surfaces aileronLeft;
@@ -26,9 +24,12 @@ public class airplaneControl : MonoBehaviour
 	public Surfaces rudder;
 	public Rigidbody Rigidbody;
 
+	public Vector3 centerOfMass;
+
     private void Awake()
 	{
 		Rigidbody = GetComponent<Rigidbody>();
+		Rigidbody.centerOfMass = centerOfMass;
 		parkBrakeOn = false;
 
 		//Wake the wheels
@@ -45,7 +46,7 @@ public class airplaneControl : MonoBehaviour
     {
 		Horizontal = (joystick.transform.localEulerAngles.x > 180) ? joystick.transform.localEulerAngles.x - 360 : joystick.transform.localEulerAngles.x;
 		Vertical = (joystick.transform.localEulerAngles.y > 180) ? joystick.transform.localEulerAngles.y - 360 : joystick.transform.localEulerAngles.y;
-		Yaw = (joystick.transform.localEulerAngles.z > 180) ? joystick.transform.localEulerAngles.z - 360 : joystick.transform.localEulerAngles.z;
+		Yaw = (joystick.transform.localEulerAngles.z > 180) ? -(joystick.transform.localEulerAngles.z - 360) : -(joystick.transform.localEulerAngles.z);
 
 		elevatorLeft.target = -Vertical / joystick.verticalClamp;
 		elevatorRight.target = -Vertical / joystick.verticalClamp;

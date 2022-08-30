@@ -32,13 +32,14 @@ public class Surfaces : MonoBehaviour
 
         //Animate
         planeSurface.localRotation = surfaceInitRotation;
+
         if (planeSurface.name != "rudder")
         {
-            planeSurface.Rotate(-Vector3.right, curAngle, Space.Self);
+            planeSurface.Rotate(Vector3.right, curAngle, Space.Self);
         }
         else
         {
-            planeSurface.Rotate(new Vector3(0, 0, -curAngle), Space.Self);
+            planeSurface.Rotate(Vector3.forward, curAngle, Space.Self);
         }
 
     }

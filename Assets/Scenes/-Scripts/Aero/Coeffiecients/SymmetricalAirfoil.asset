@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36c37e8c3d63da540b679fc6e0cebee0, type: 3}
-  m_Name: F16
+  m_Name: SymmetricalAirfoil
   m_EditorClassIdentifier: 
   lift_Coefficient:
     serializedVersion: 2
@@ -19,83 +19,65 @@ MonoBehaviour:
       time: 0
       value: 0
       inSlope: 0
-      outSlope: 0.07755427
-      tangentMode: 1
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.88853216
-    - serializedVersion: 3
-      time: 5
-      value: 0.4
-      inSlope: 0.06687131
-      outSlope: 0.052620135
-      tangentMode: 1
-      weightedMode: 0
-      inWeight: 0.70867795
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 10
-      value: 0.7
-      inSlope: 0.070305824
-      outSlope: 0.070305824
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.5919226
+      inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 16
-      value: 1.1
-      inSlope: 0.06494945
-      outSlope: 0.051015455
-      tangentMode: 1
+      time: 42.75
+      value: 0.8396225
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.2628058
-      outWeight: 0.8201392
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
-      time: 22
-      value: 1.4
-      inSlope: 0.047432486
-      outSlope: 0.047836136
-      tangentMode: 1
+      time: 64.5
+      value: 0.85377884
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 1
-      outWeight: 0.9414849
-    - serializedVersion: 3
-      time: 26
-      value: 1.5
-      inSlope: 0.00021617366
-      outSlope: 0.03281214
-      tangentMode: 1
-      weightedMode: 0
-      inWeight: 1
-      outWeight: 0.39210814
-    - serializedVersion: 3
-      time: 30.785084
-      value: 1.7
-      inSlope: 0.04885426
-      outSlope: 0.05397731
-      tangentMode: 1
-      weightedMode: 0
-      inWeight: 0.32622623
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 35
-      value: 1.99
-      inSlope: 0.06880326
-      outSlope: 0.006834168
-      tangentMode: 1
-      weightedMode: 0
-      inWeight: 0.3931841
-      outWeight: 0.27083158
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 90
       value: 0
-      inSlope: -0.058263343
-      outSlope: 0.042305376
-      tangentMode: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.25655505
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 150
+      value: -0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 165
+      value: -1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 180
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

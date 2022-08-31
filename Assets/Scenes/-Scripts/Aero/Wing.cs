@@ -29,6 +29,10 @@ public class Wing : MonoBehaviour
     void FixedUpdate()
     {
         CalculateLiftAndDrag();
+        if (gameObject.name == "WingL")
+        {
+            Debug.Log(coefficients.lift_Coefficient.Evaluate(angleOfAttack) + " / " + angleOfAttack);
+        }
     }
     void CalculateLiftAndDrag()
     {

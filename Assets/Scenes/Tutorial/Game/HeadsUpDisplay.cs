@@ -4,19 +4,15 @@ using UnityEngine.UI;
 
 public class HeadsUpDisplay : MonoBehaviour
 {
-	public airplaneControl plane;
-	public Image fpm;
-	public Camera FPV;
-
-	
+	public Text temp;
+	float avg;
 
 	// Update is called once per frame
 	void Update()
 	{
-
-		Vector3 position = Vector3.zero;
-		position = FPV.WorldToScreenPoint(plane.transform.position + (plane.Rigidbody.velocity.normalized * 500f));
-		fpm.transform.position = position;
+		avg += ((Time.deltaTime / Time.timeScale) - avg) * 0.03f;
+		temp.text = (1f / avg).ToString();
+	
 	}
 
 	

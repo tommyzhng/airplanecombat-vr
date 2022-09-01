@@ -15,7 +15,7 @@ public class Surfaces : MonoBehaviour
     private Quaternion surfaceInitRotation;
     public float rotationSpeed = 90;
     //Animate Visible Surfaces
-    public Vector3 axis;
+    private Vector3 axis;
 
     void Awake()
     {

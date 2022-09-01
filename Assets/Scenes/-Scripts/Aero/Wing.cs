@@ -28,11 +28,8 @@ public class Wing : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //Call the function
         CalculateLiftAndDrag();
-        if (gameObject.name == "WingL")
-        {
-            Debug.Log(coefficients.lift_Coefficient.Evaluate(angleOfAttack) + " / " + angleOfAttack);
-        }
     }
     void CalculateLiftAndDrag()
     {
@@ -53,9 +50,7 @@ public class Wing : MonoBehaviour
         drag = 0.5f * 1.2f * flowVelocity.sqrMagnitude * (wingX * wingY) * dragCoefficient * dragFactor;
 
         //find where to apply the force
-        if (centerForce) {forcePoint = rbPlane.transform.TransformPoint(rbPlane.centerOfMass);}
-        else {forcePoint = transform.position;}
-
+        forcePoint = centerForce ? rbPlane.transform.TransformPoint(rbPlane.centerOfMass) : transform.position;
         //Add force                           //lift must be in the up direction (crossing fwd & right does this)
         rbPlane.AddForceAtPosition(lift * Vector3.Cross(rbPlane.velocity, transform.right).normalized, forcePoint);
         rbPlane.AddForceAtPosition(drag * -rbPlane.velocity.normalized, forcePoint);

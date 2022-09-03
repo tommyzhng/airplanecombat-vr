@@ -2,6 +2,7 @@
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 using System;
 
 public class airplaneControl : MonoBehaviour
@@ -10,7 +11,7 @@ public class airplaneControl : MonoBehaviour
 	public WheelCollider leftWheel;
 	public WheelCollider rightWheel;
 	public WheelCollider frontWheel;
-	private bool parkBrakeOn;
+	private bool brakeApplied;
 	//Axis
 	public JoystickRotation joystick;
 	private float Vertical;
@@ -24,14 +25,18 @@ public class airplaneControl : MonoBehaviour
 	public Surfaces rudder;
 	public Rigidbody Rigidbody;
 
+	//Airbrakes
+	public Surfaces spoiler;
+
 	public Vector3 centerOfMass;
+
+	public IInputInteraction interaction { get; }
 
     private void Awake()
 	{
 		Rigidbody = GetComponent<Rigidbody>();
 		Rigidbody.centerOfMass = centerOfMass;
-		parkBrakeOn = false;
-
+		brakeApplied = false;
 		//Wake the wheels
 		frontWheel.motorTorque = 1;
 	}
@@ -39,10 +44,9 @@ public class airplaneControl : MonoBehaviour
     // Update is called once per frame
     void Update()
 	{
-		DeflectionValues();
-		Brake();
+		ControlSurfaceValues();
 	}
-	void DeflectionValues()
+	void ControlSurfaceValues()
     {
 		Horizontal = (joystick.transform.localEulerAngles.x > 180) ? joystick.transform.localEulerAngles.x - 360 : joystick.transform.localEulerAngles.x;
 		Vertical = (joystick.transform.localEulerAngles.y > 180) ? joystick.transform.localEulerAngles.y - 360 : joystick.transform.localEulerAngles.y;
@@ -55,28 +59,29 @@ public class airplaneControl : MonoBehaviour
 		rudder.target = Yaw / joystick.yawClamp;
 	}
 
-	public void Brake()
-    {
-		if (Input.GetKey(KeyCode.Space)){parkBrakeOn = true; }
-        else if (Input.GetKeyUp(KeyCode.Space)){parkBrakeOn = false; }
-
-		if (Input.GetKeyDown(KeyCode.P))
+	//##Oculus Input##\\
+	public void Brake(InputAction.CallbackContext brakeButton)
+	{
+		if (brakeButton.interaction is HoldInteraction)
 		{
-			if (!parkBrakeOn)	parkBrakeOn = true;
-			else if (parkBrakeOn)	parkBrakeOn = false;
-		}
-		if (parkBrakeOn)
-		{
-			rightWheel.brakeTorque = 1000f;
-			leftWheel.brakeTorque = 1000f;
-		}
-		else if (!parkBrakeOn && !Input.GetKey(KeyCode.Space))	//if parkbrake not on, engine on, and not pressing space, apply no brake
-        {
-			rightWheel.brakeTorque = 0f;
-			leftWheel.brakeTorque = 0f;
-		}
+			if (brakeButton.canceled)		// Cancelled - brake has been held for < 0.2s, activate brakes till pressed again
+			{
+				brakeApplied = brakeApplied ? false : true;
+			}
+			else if (brakeButton.performed)			//Performed - brake has been held for > 0.2s, activate brakes when held
+			{
+				brakeApplied = true;
+			}
+		}	
+		if (brakeApplied) { rightWheel.brakeTorque = 1000f; leftWheel.brakeTorque = 1000f; }
+		else { rightWheel.brakeTorque = 0f; leftWheel.brakeTorque = 0f; }
 	}
+	public void Airbrake(InputAction.CallbackContext airBrakeButton)
+    {
+		if (airBrakeButton.started) { spoiler.target = (spoiler.target == 0) ? -1 : 0; }
+    }
 
+	//Debug
 	private void OnGUI()
     {
 		const float msToKnots = 1.94384f;

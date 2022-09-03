@@ -46,7 +46,7 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""VRRightGrip"",
+                    ""name"": ""Joystick Grab"",
                     ""type"": ""Button"",
                     ""id"": ""768a5ce7-302e-4a67-a762-eb7e8c88d7d1"",
                     ""expectedControlType"": ""Button"",
@@ -55,22 +55,22 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""VRLeftGrip"",
-                    ""type"": ""Button"",
-                    ""id"": ""36da3ece-97e3-43a3-b764-b71dc18bdb24"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""VRXTrack"",
+                    ""name"": ""Rudder"",
                     ""type"": ""Value"",
                     ""id"": ""8b759931-29d9-486f-b0ef-1b81bd27bc1e"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Throttle Grab"",
+                    ""type"": ""Button"",
+                    ""id"": ""36da3ece-97e3-43a3-b764-b71dc18bdb24"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""Throttle"",
@@ -80,9 +80,93 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""GroundBrake"",
+                    ""type"": ""Button"",
+                    ""id"": ""5baa0bfd-de99-41c5-98f9-2a2d080b7fb2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Spoilers"",
+                    ""type"": ""Button"",
+                    ""id"": ""008db0ea-1c63-498d-9578-00aa49fb93d4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""a0fcc0c5-c69b-4e10-8925-e6e75d153cfa"",
+                    ""path"": ""<OculusTouchController>{RightHand}/gripPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Joystick Grab"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7862dabb-2e1f-41a8-b192-2dcc051842ab"",
+                    ""path"": ""<OculusTouchController>{LeftHand}/gripPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throttle Grab"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""75ff8546-7f85-4c43-b7f5-4841d32429ce"",
+                    ""path"": ""<OculusTouchController>{RightHand}/thumbstickClicked"",
+                    ""interactions"": ""Hold(duration=0.2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GroundBrake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1199c2f3-f733-4438-9f53-ef0cf529203b"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": ""Hold(duration=0.2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GroundBrake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a26104ff-4c0b-43df-aeab-182760f4c981"",
+                    ""path"": ""<OculusTouchController>/secondaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Spoilers"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2820732-9f90-4774-b6f2-a956088bb3a5"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Spoilers"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
                 {
                     ""name"": ""3D Vector"",
                     ""id"": ""63e9e5e5-edeb-40c6-bf0c-da924e858c61"",
@@ -162,34 +246,12 @@ public partial class @Control : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d00141c7-fd69-40e8-a3fa-60831881b47a"",
+                    ""id"": ""f967ccd7-c1ef-4795-98c1-8a564227d108"",
                     ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ControlMouse"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a0fcc0c5-c69b-4e10-8925-e6e75d153cfa"",
-                    ""path"": ""<OculusTouchController>{RightHand}/gripPressed"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""VRRightGrip"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e74963a5-f920-42fb-99b3-39d8f5515930"",
-                    ""path"": ""<OculusTouchController>{RightHand}/thumbstick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""VRXTrack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -228,12 +290,12 @@ public partial class @Control : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""7862dabb-2e1f-41a8-b192-2dcc051842ab"",
-                    ""path"": ""<OculusTouchController>{LeftHand}/gripPressed"",
+                    ""id"": ""e74963a5-f920-42fb-99b3-39d8f5515930"",
+                    ""path"": ""<OculusTouchController>{RightHand}/thumbstick"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone(min=0.125)"",
                     ""groups"": """",
-                    ""action"": ""VRLeftGrip"",
+                    ""action"": ""Rudder"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -246,10 +308,12 @@ public partial class @Control : IInputActionCollection2, IDisposable
         m_Plane = asset.FindActionMap("Plane", throwIfNotFound: true);
         m_Plane_ControlKb = m_Plane.FindAction("ControlKb", throwIfNotFound: true);
         m_Plane_ControlMouse = m_Plane.FindAction("ControlMouse", throwIfNotFound: true);
-        m_Plane_VRRightGrip = m_Plane.FindAction("VRRightGrip", throwIfNotFound: true);
-        m_Plane_VRLeftGrip = m_Plane.FindAction("VRLeftGrip", throwIfNotFound: true);
-        m_Plane_VRXTrack = m_Plane.FindAction("VRXTrack", throwIfNotFound: true);
+        m_Plane_JoystickGrab = m_Plane.FindAction("Joystick Grab", throwIfNotFound: true);
+        m_Plane_Rudder = m_Plane.FindAction("Rudder", throwIfNotFound: true);
+        m_Plane_ThrottleGrab = m_Plane.FindAction("Throttle Grab", throwIfNotFound: true);
         m_Plane_Throttle = m_Plane.FindAction("Throttle", throwIfNotFound: true);
+        m_Plane_GroundBrake = m_Plane.FindAction("GroundBrake", throwIfNotFound: true);
+        m_Plane_Spoilers = m_Plane.FindAction("Spoilers", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -311,20 +375,24 @@ public partial class @Control : IInputActionCollection2, IDisposable
     private IPlaneActions m_PlaneActionsCallbackInterface;
     private readonly InputAction m_Plane_ControlKb;
     private readonly InputAction m_Plane_ControlMouse;
-    private readonly InputAction m_Plane_VRRightGrip;
-    private readonly InputAction m_Plane_VRLeftGrip;
-    private readonly InputAction m_Plane_VRXTrack;
+    private readonly InputAction m_Plane_JoystickGrab;
+    private readonly InputAction m_Plane_Rudder;
+    private readonly InputAction m_Plane_ThrottleGrab;
     private readonly InputAction m_Plane_Throttle;
+    private readonly InputAction m_Plane_GroundBrake;
+    private readonly InputAction m_Plane_Spoilers;
     public struct PlaneActions
     {
         private @Control m_Wrapper;
         public PlaneActions(@Control wrapper) { m_Wrapper = wrapper; }
         public InputAction @ControlKb => m_Wrapper.m_Plane_ControlKb;
         public InputAction @ControlMouse => m_Wrapper.m_Plane_ControlMouse;
-        public InputAction @VRRightGrip => m_Wrapper.m_Plane_VRRightGrip;
-        public InputAction @VRLeftGrip => m_Wrapper.m_Plane_VRLeftGrip;
-        public InputAction @VRXTrack => m_Wrapper.m_Plane_VRXTrack;
+        public InputAction @JoystickGrab => m_Wrapper.m_Plane_JoystickGrab;
+        public InputAction @Rudder => m_Wrapper.m_Plane_Rudder;
+        public InputAction @ThrottleGrab => m_Wrapper.m_Plane_ThrottleGrab;
         public InputAction @Throttle => m_Wrapper.m_Plane_Throttle;
+        public InputAction @GroundBrake => m_Wrapper.m_Plane_GroundBrake;
+        public InputAction @Spoilers => m_Wrapper.m_Plane_Spoilers;
         public InputActionMap Get() { return m_Wrapper.m_Plane; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -340,18 +408,24 @@ public partial class @Control : IInputActionCollection2, IDisposable
                 @ControlMouse.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnControlMouse;
                 @ControlMouse.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnControlMouse;
                 @ControlMouse.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnControlMouse;
-                @VRRightGrip.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRRightGrip;
-                @VRRightGrip.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRRightGrip;
-                @VRRightGrip.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRRightGrip;
-                @VRLeftGrip.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRLeftGrip;
-                @VRLeftGrip.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRLeftGrip;
-                @VRLeftGrip.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRLeftGrip;
-                @VRXTrack.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRXTrack;
-                @VRXTrack.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRXTrack;
-                @VRXTrack.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnVRXTrack;
+                @JoystickGrab.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnJoystickGrab;
+                @JoystickGrab.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnJoystickGrab;
+                @JoystickGrab.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnJoystickGrab;
+                @Rudder.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnRudder;
+                @Rudder.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnRudder;
+                @Rudder.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnRudder;
+                @ThrottleGrab.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnThrottleGrab;
+                @ThrottleGrab.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnThrottleGrab;
+                @ThrottleGrab.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnThrottleGrab;
                 @Throttle.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnThrottle;
                 @Throttle.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnThrottle;
                 @Throttle.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnThrottle;
+                @GroundBrake.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnGroundBrake;
+                @GroundBrake.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnGroundBrake;
+                @GroundBrake.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnGroundBrake;
+                @Spoilers.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnSpoilers;
+                @Spoilers.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnSpoilers;
+                @Spoilers.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnSpoilers;
             }
             m_Wrapper.m_PlaneActionsCallbackInterface = instance;
             if (instance != null)
@@ -362,18 +436,24 @@ public partial class @Control : IInputActionCollection2, IDisposable
                 @ControlMouse.started += instance.OnControlMouse;
                 @ControlMouse.performed += instance.OnControlMouse;
                 @ControlMouse.canceled += instance.OnControlMouse;
-                @VRRightGrip.started += instance.OnVRRightGrip;
-                @VRRightGrip.performed += instance.OnVRRightGrip;
-                @VRRightGrip.canceled += instance.OnVRRightGrip;
-                @VRLeftGrip.started += instance.OnVRLeftGrip;
-                @VRLeftGrip.performed += instance.OnVRLeftGrip;
-                @VRLeftGrip.canceled += instance.OnVRLeftGrip;
-                @VRXTrack.started += instance.OnVRXTrack;
-                @VRXTrack.performed += instance.OnVRXTrack;
-                @VRXTrack.canceled += instance.OnVRXTrack;
+                @JoystickGrab.started += instance.OnJoystickGrab;
+                @JoystickGrab.performed += instance.OnJoystickGrab;
+                @JoystickGrab.canceled += instance.OnJoystickGrab;
+                @Rudder.started += instance.OnRudder;
+                @Rudder.performed += instance.OnRudder;
+                @Rudder.canceled += instance.OnRudder;
+                @ThrottleGrab.started += instance.OnThrottleGrab;
+                @ThrottleGrab.performed += instance.OnThrottleGrab;
+                @ThrottleGrab.canceled += instance.OnThrottleGrab;
                 @Throttle.started += instance.OnThrottle;
                 @Throttle.performed += instance.OnThrottle;
                 @Throttle.canceled += instance.OnThrottle;
+                @GroundBrake.started += instance.OnGroundBrake;
+                @GroundBrake.performed += instance.OnGroundBrake;
+                @GroundBrake.canceled += instance.OnGroundBrake;
+                @Spoilers.started += instance.OnSpoilers;
+                @Spoilers.performed += instance.OnSpoilers;
+                @Spoilers.canceled += instance.OnSpoilers;
             }
         }
     }
@@ -382,9 +462,11 @@ public partial class @Control : IInputActionCollection2, IDisposable
     {
         void OnControlKb(InputAction.CallbackContext context);
         void OnControlMouse(InputAction.CallbackContext context);
-        void OnVRRightGrip(InputAction.CallbackContext context);
-        void OnVRLeftGrip(InputAction.CallbackContext context);
-        void OnVRXTrack(InputAction.CallbackContext context);
+        void OnJoystickGrab(InputAction.CallbackContext context);
+        void OnRudder(InputAction.CallbackContext context);
+        void OnThrottleGrab(InputAction.CallbackContext context);
         void OnThrottle(InputAction.CallbackContext context);
+        void OnGroundBrake(InputAction.CallbackContext context);
+        void OnSpoilers(InputAction.CallbackContext context);
     }
 }

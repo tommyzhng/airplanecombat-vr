@@ -10,6 +10,7 @@ public class Surfaces : MonoBehaviour
     private float desiredAngle;
     public float max = 15f;
     //Rotate Physics Surface
+    public bool animateSurface;
     public Transform planeSurface;
     private Quaternion physicsInitRotation;
     private Quaternion surfaceInitRotation;
@@ -21,9 +22,13 @@ public class Surfaces : MonoBehaviour
     {
         //initial rotation set as default spawned rotation - accessed later to default to these values when let go of keys
         physicsInitRotation = transform.localRotation;
-        surfaceInitRotation = planeSurface.transform.localRotation;
         //Detect Rudder
-        axis = (planeSurface.name == "rudder") ? Vector3.forward : Vector3.left;
+        if (animateSurface)
+        {
+            surfaceInitRotation = planeSurface.transform.localRotation;
+            axis = (planeSurface.name == "rudder") ? Vector3.forward : Vector3.left;
+        }
+        
     }
     void FixedUpdate()
     {
@@ -33,9 +38,13 @@ public class Surfaces : MonoBehaviour
         //Rotate Physics
         transform.localRotation = physicsInitRotation;
         transform.Rotate(Vector3.right, curAngle, Space.Self);
-
+        
         //Animate
-        planeSurface.localRotation = surfaceInitRotation;
-        planeSurface.transform.Rotate(axis, curAngle, Space.Self);
+        if (animateSurface)
+        {
+            planeSurface.localRotation = surfaceInitRotation;
+            planeSurface.transform.Rotate(axis, curAngle, Space.Self);
+        }
+
     }
 }

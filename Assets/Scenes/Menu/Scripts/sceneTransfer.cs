@@ -81,7 +81,7 @@ public class sceneTransfer : MonoBehaviour
     public void SpawnTutorial()
     {
         PlayerPrefs.SetInt("selectedPlane", planeIndex);
-        SceneManager.LoadScene("tutorial");
+        SceneManager.LoadSceneAsync("tutorial");
         
     }
 

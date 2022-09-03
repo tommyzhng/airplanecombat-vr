@@ -32,7 +32,6 @@ public class JoystickRotation : MonoBehaviour
 			transform.localEulerAngles = new Vector3(0, 0, 0); 
 		}
 	}
-
 	//Joystick Control
 	private void RotateJoystick()
     {
@@ -52,6 +51,7 @@ public class JoystickRotation : MonoBehaviour
 		}
 		transform.localEulerAngles = new Vector3(x, y, z);
 	}
+	//Oculus Control
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("RHand"))
@@ -67,6 +67,7 @@ public class JoystickRotation : MonoBehaviour
     {
 		xRightStick = x.ReadValue<Vector2>().x;
     }
+
 	//Keyboard Control
 	public void Axis(InputAction.CallbackContext keyDown)
 	{

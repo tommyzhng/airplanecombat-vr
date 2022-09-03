@@ -24,7 +24,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "VRRightGrip",
+                    "name": "Joystick Grab",
                     "type": "Button",
                     "id": "768a5ce7-302e-4a67-a762-eb7e8c88d7d1",
                     "expectedControlType": "Button",
@@ -33,22 +33,22 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "VRLeftGrip",
-                    "type": "Button",
-                    "id": "36da3ece-97e3-43a3-b764-b71dc18bdb24",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "VRXTrack",
+                    "name": "Rudder",
                     "type": "Value",
                     "id": "8b759931-29d9-486f-b0ef-1b81bd27bc1e",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Throttle Grab",
+                    "type": "Button",
+                    "id": "36da3ece-97e3-43a3-b764-b71dc18bdb24",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Throttle",
@@ -58,9 +58,93 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "GroundBrake",
+                    "type": "Button",
+                    "id": "5baa0bfd-de99-41c5-98f9-2a2d080b7fb2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Spoilers",
+                    "type": "Button",
+                    "id": "008db0ea-1c63-498d-9578-00aa49fb93d4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
+                {
+                    "name": "",
+                    "id": "a0fcc0c5-c69b-4e10-8925-e6e75d153cfa",
+                    "path": "<OculusTouchController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Joystick Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7862dabb-2e1f-41a8-b192-2dcc051842ab",
+                    "path": "<OculusTouchController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Throttle Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "75ff8546-7f85-4c43-b7f5-4841d32429ce",
+                    "path": "<OculusTouchController>{RightHand}/thumbstickClicked",
+                    "interactions": "Hold(duration=0.2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GroundBrake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1199c2f3-f733-4438-9f53-ef0cf529203b",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Hold(duration=0.2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GroundBrake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a26104ff-4c0b-43df-aeab-182760f4c981",
+                    "path": "<OculusTouchController>/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spoilers",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a2820732-9f90-4774-b6f2-a956088bb3a5",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spoilers",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
                 {
                     "name": "3D Vector",
                     "id": "63e9e5e5-edeb-40c6-bf0c-da924e858c61",
@@ -140,34 +224,12 @@
                 },
                 {
                     "name": "",
-                    "id": "d00141c7-fd69-40e8-a3fa-60831881b47a",
+                    "id": "f967ccd7-c1ef-4795-98c1-8a564227d108",
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "ControlMouse",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a0fcc0c5-c69b-4e10-8925-e6e75d153cfa",
-                    "path": "<OculusTouchController>{RightHand}/gripPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "VRRightGrip",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e74963a5-f920-42fb-99b3-39d8f5515930",
-                    "path": "<OculusTouchController>{RightHand}/thumbstick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "VRXTrack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -206,12 +268,12 @@
                 },
                 {
                     "name": "",
-                    "id": "7862dabb-2e1f-41a8-b192-2dcc051842ab",
-                    "path": "<OculusTouchController>{LeftHand}/gripPressed",
+                    "id": "e74963a5-f920-42fb-99b3-39d8f5515930",
+                    "path": "<OculusTouchController>{RightHand}/thumbstick",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "StickDeadzone(min=0.125)",
                     "groups": "",
-                    "action": "VRLeftGrip",
+                    "action": "Rudder",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -18,15 +18,14 @@ public class loadPlane : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        
-    }
-    private void Start()
-    {
         planeIndex = PlayerPrefs.GetInt("selectedPlane");
         //Spawn Plane
         GameObject plane = planePrefabs[planeIndex];
         GameObject spawn = Instantiate(plane, spawnLocation.position, Quaternion.identity);
         spawn.name = "plane";
+    }
+    private void Start()
+    {
         //Move Camera
         vrCam.transform.parent = GameObject.Find("plane").transform;
         vrCam.transform.localPosition = spawnOffset[planeIndex];

@@ -36,7 +36,7 @@ public class airplaneControl : MonoBehaviour
 	{
 		Rigidbody = GetComponent<Rigidbody>();
 		Rigidbody.centerOfMass = centerOfMass;
-		brakeApplied = false;
+		brakeApplied = true;
 		//Wake the wheels
 		frontWheel.motorTorque = 1;
 	}

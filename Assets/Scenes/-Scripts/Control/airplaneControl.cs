@@ -72,8 +72,8 @@ public class airplaneControl : MonoBehaviour
 			{
 				brakeApplied = true;
 			}
-		}	
-		if (brakeApplied) { rightWheel.brakeTorque = 1000f; leftWheel.brakeTorque = 1000f; }
+		}
+		if (brakeApplied) { rightWheel.brakeTorque = 1000f; leftWheel.brakeTorque = 1000f; } //"lbl box 'brake applied'"
 		else { rightWheel.brakeTorque = 0f; leftWheel.brakeTorque = 0f; }
 	}
 	public void Airbrake(InputAction.CallbackContext airBrakeButton)

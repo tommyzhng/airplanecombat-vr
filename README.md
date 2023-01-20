@@ -14,6 +14,12 @@ Control Surface Deflection:
 
 https://user-images.githubusercontent.com/109367999/213570914-7ed3cb7e-40d5-4251-9599-a2e24008a200.mp4
 
+Flight / HUD Display:
+
+https://user-images.githubusercontent.com/109367999/213732497-f1b9eca8-faf0-4282-897d-885400c765e6.mp4
+
+
+
 Other (Not Finished):
 
 Waypoint System:

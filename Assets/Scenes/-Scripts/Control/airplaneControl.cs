@@ -11,7 +11,7 @@ public class airplaneControl : MonoBehaviour
 	public WheelCollider leftWheel;
 	public WheelCollider rightWheel;
 	public WheelCollider frontWheel;
-	private bool brakeApplied;
+	public bool brakeApplied;
 	//Axis
 	public JoystickRotation joystick;
 	private float Vertical;
@@ -39,24 +39,50 @@ public class airplaneControl : MonoBehaviour
 		brakeApplied = true;
 		//Wake the wheels
 		frontWheel.motorTorque = 1;
+		rightWheel.brakeTorque = 1000f; 
+		leftWheel.brakeTorque = 1000f;
 	}
 
     // Update is called once per frame
     void Update()
 	{
 		ControlSurfaceValues();
+		Steering();
 	}
+
 	void ControlSurfaceValues()
     {
-		Horizontal = (joystick.transform.localEulerAngles.x > 180) ? joystick.transform.localEulerAngles.x - 360 : joystick.transform.localEulerAngles.x;
+		//apply equivalent rotations if past 180deg
+		Horizontal = (joystick.transform.localEulerAngles.x > 180) ? joystick.transform.localEulerAngles.x - 360 : joystick.transform.localEulerAngles.x;		
 		Vertical = (joystick.transform.localEulerAngles.y > 180) ? joystick.transform.localEulerAngles.y - 360 : joystick.transform.localEulerAngles.y;
 		Yaw = (joystick.transform.localEulerAngles.z > 180) ? -(joystick.transform.localEulerAngles.z - 360) : -(joystick.transform.localEulerAngles.z);
 
+		//send target angle movement
 		elevatorLeft.target = -Vertical / joystick.verticalClamp;
 		elevatorRight.target = -Vertical / joystick.verticalClamp;
 		aileronLeft.target = Horizontal / joystick.horizontalClamp;
 		aileronRight.target = -Horizontal / joystick.horizontalClamp;
 		rudder.target = Yaw / joystick.yawClamp;
+		
+	}
+
+	
+	public void Steering()
+	{
+		//Steering angle opposite of yaw deflection
+		float velocity = (float) Math.Round(Rigidbody.velocity.magnitude, 1);
+		if (velocity < 100)
+		{
+			float steer = -Yaw;
+			float clamp = (30 / (velocity * 0.1f));
+
+			//Clamp angle based on speed of plane
+			if (Mathf.Abs(steer) > clamp)
+			{
+				steer = Mathf.Sign(-Yaw) * clamp;
+			}
+			frontWheel.steerAngle = steer;
+		}	
 	}
 
 	//##Oculus Input##\\
@@ -78,14 +104,12 @@ public class airplaneControl : MonoBehaviour
 	}
 	public void Airbrake(InputAction.CallbackContext airBrakeButton)
     {
-		if (airBrakeButton.started) { spoiler.target = (spoiler.target == 0) ? -1 : 0; }
+		if (airBrakeButton.started) { spoiler.target = (spoiler.target == 0) ? -1 : 0;}
     }
 
 	//Debug
 	private void OnGUI()
     {
-		const float msToKnots = 1.94384f;
-		GUI.Label(new Rect(10, 40, 300, 20), string.Format("Speed: {0:0.0} knots", Rigidbody.velocity.magnitude * msToKnots));
-		GUI.Label(new Rect(10, 80, 300, 20), string.Format("FPS: {0:0.0}", 1 / Time.deltaTime));
+		GUI.Label(new Rect(10, 35, 300, 20), string.Format("FPS: {0:0.0}", 1 / Time.deltaTime));
 	}
 }

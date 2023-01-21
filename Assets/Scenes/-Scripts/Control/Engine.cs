@@ -24,7 +24,7 @@ public class Engine : MonoBehaviour
 	}
     private void OnGUI()
     {
-		GUI.Label(new Rect(10, 60, 300, 20), string.Format("Throttle: {0:0.0}%", throttle * 100.0f));
+		GUI.Label(new Rect(10, 15, 300, 20), string.Format("Throttle: {0:0.0}%", throttle * 100.0f));
 	}
 
 }

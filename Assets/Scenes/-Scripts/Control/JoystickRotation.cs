@@ -21,7 +21,7 @@ public class JoystickRotation : MonoBehaviour
 
 	private void Awake()
 	{
-		rot = new Vector3(-horizontalClamp, verticalClamp, yawClamp);
+		rot = new Vector3(-horizontalClamp, verticalClamp, yawClamp); //rotation only up to the clamp limits
 	}
     private void FixedUpdate()
     {

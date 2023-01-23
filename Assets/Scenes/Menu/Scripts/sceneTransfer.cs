@@ -9,6 +9,7 @@ public class sceneTransfer : MonoBehaviour
     //All canvas
     public Canvas startScreen;
     public Canvas planeSelection;
+    public GameObject instructionPanel;
 
     //Plane Selection
     public GameObject podium;
@@ -76,6 +77,19 @@ public class sceneTransfer : MonoBehaviour
         }
         move = 0f;
     }
+
+
+    public void Instructions()
+    {
+        StopAllCoroutines();
+        StartCoroutine(MoveIn(instructionPanel, new Vector3(-6.71f, 1.4f, -8.98f)));
+    }
+    public void InstructionsOut()
+    {
+        StopAllCoroutines();
+        StartCoroutine(MoveIn(instructionPanel, new Vector3(-6.71f, -4f, -8.98f)));
+    }
+    
 
     //When confirm button clicked
     public void SpawnTutorial()

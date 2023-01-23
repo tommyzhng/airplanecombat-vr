@@ -42,7 +42,7 @@ Other (Not Finished):
 
 Waypoint System:
 <p align="center">
-  <img width="80%" height="80%" src="https://github.com/tommyzhng/AirplaneCombatVR/blob/master/Assets/Other/waypoint%20system.gif">
+  <img width="80%" height="80%" src="https://github.com/tommyzhng/AirplaneCombatVR/blob/master/Assets/Other/waypointsystem.gif">
 </p>
 
 

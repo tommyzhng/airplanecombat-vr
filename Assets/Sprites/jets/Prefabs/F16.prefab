@@ -430,14 +430,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306560196808560741}
-  m_LocalRotation: {x: 0.08715578, y: 0.9961947, z: -0, w: -0}
-  m_LocalPosition: {x: 1.8400434, y: -0.04999984, z: 5.4999886}
+  m_LocalRotation: {x: 0.087152466, y: 0.99615675, z: -0.0086933505, w: 0.00076056994}
+  m_LocalPosition: {x: 1.8400434, y: -0.04999984, z: 5.66}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4914355649902917648}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 10}
+  m_LocalEulerAnglesHint: {x: 1, y: 180, z: 10}
 --- !u!114 &8106689323917175694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,8 +451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wingX: 2
-  wingY: 1.6
-  liftFactor: 1.3
+  wingY: 1.5
+  liftFactor: 1.5
   dragFactor: 1
   coefficients: {fileID: 11400000, guid: 90b9f22dfdcd0eb4a8b986140ce1768f, type: 2}
   centerForce: 0
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: 0
-  max: 30
+  max: 20
   animateSurface: 1
   planeSurface: {fileID: 5276397105454230161}
   rotationSpeed: 100
@@ -920,8 +920,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143944139576429298}
   m_LocalRotation: {x: -0, y: -0, z: 0.004363368, w: 0.9999905}
-  m_LocalPosition: {x: 0.3999316, y: 0.0034901958, z: -1.6000097}
-  m_LocalScale: {x: 0.99999994, y: 0.9999998, z: 1}
+  m_LocalPosition: {x: 0.3999316, y: 0.0034901958, z: -1.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9153706073674689766}
@@ -941,7 +941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: 0
-  max: 23
+  max: 22
   animateSurface: 1
   planeSurface: {fileID: 5276397105454182551}
   rotationSpeed: 100
@@ -2306,8 +2306,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4953739271143912894}
   m_LocalRotation: {x: 0.004363274, y: 0.9999905, z: -0, w: -0}
-  m_LocalPosition: {x: -2.6999733, y: 0, z: 0.72}
-  m_LocalScale: {x: 0.9999999, y: 1, z: 0.99999976}
+  m_LocalPosition: {x: -2.6999733, y: 0, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2177495838174170815}
@@ -2327,9 +2327,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wingX: 3.6
-  wingY: 3.2
-  liftFactor: 2.5
-  dragFactor: 1.5
+  wingY: 3
+  liftFactor: 1.3
+  dragFactor: 1
   coefficients: {fileID: 11400000, guid: 73444ee070201de4f95e07fd5fc27cde, type: 2}
   centerForce: 0
 --- !u!1 &5001834083278864888
@@ -2357,14 +2357,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5001834083278864888}
-  m_LocalRotation: {x: -0.08715578, y: 0.9961947, z: -0, w: 0}
-  m_LocalPosition: {x: -1.8400434, y: -0.04999984, z: 5.4999886}
+  m_LocalRotation: {x: -0.087152466, y: 0.99615675, z: -0.0086933505, w: -0.00076056994}
+  m_LocalPosition: {x: -1.8400434, y: -0.04999984, z: 5.66}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4914355649902917648}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: -10}
+  m_LocalEulerAnglesHint: {x: 1, y: 180, z: -10}
 --- !u!114 &5569627307658583618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2378,8 +2378,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wingX: 2
-  wingY: 1.6
-  liftFactor: 1.3
+  wingY: 1.5
+  liftFactor: 1.5
   dragFactor: 1
   coefficients: {fileID: 11400000, guid: 90b9f22dfdcd0eb4a8b986140ce1768f, type: 2}
   centerForce: 0
@@ -2396,7 +2396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: 0
-  max: 30
+  max: 20
   animateSurface: 1
   planeSurface: {fileID: 5276397105454233027}
   rotationSpeed: 100
@@ -2508,8 +2508,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5113412932874846271}
   m_LocalRotation: {x: -0.004363368, y: 0.9999905, z: -0, w: 0}
-  m_LocalPosition: {x: 2.6999733, y: 0, z: 0.72}
-  m_LocalScale: {x: 0.9999999, y: 1, z: 0.99999976}
+  m_LocalPosition: {x: 2.6999733, y: 0, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4518528321391617071}
@@ -2529,9 +2529,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wingX: 3.6
-  wingY: 3.2
-  liftFactor: 2.5
-  dragFactor: 1.5
+  wingY: 3
+  liftFactor: 1.3
+  dragFactor: 1
   coefficients: {fileID: 11400000, guid: 73444ee070201de4f95e07fd5fc27cde, type: 2}
   centerForce: 0
 --- !u!1 &5166064640863924411
@@ -3453,8 +3453,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5778156279670410795}
   m_LocalRotation: {x: -0, y: -0, z: -0.004363274, w: 0.9999905}
-  m_LocalPosition: {x: -0.3999316, y: 0.003490121, z: -1.6000097}
-  m_LocalScale: {x: 0.99999994, y: 0.9999998, z: 1}
+  m_LocalPosition: {x: -0.3999316, y: 0.003490121, z: -1.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9153706072737075986}
@@ -3474,7 +3474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: 0
-  max: 23
+  max: 22
   animateSurface: 1
   planeSurface: {fileID: 5276397105454140013}
   rotationSpeed: 100
@@ -4264,7 +4264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7063088900610998874}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 1696.6632, y: 5.1600003, z: 652.09344}
+  m_LocalPosition: {x: 1696.6632, y: 5.1600003, z: 652.56}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1000003}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4284,8 +4284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wingX: 1.5
-  wingY: 15
-  liftFactor: 4
+  wingY: 14
+  liftFactor: 10
   dragFactor: 1
   coefficients: {fileID: 11400000, guid: 7ddeb214c6154ca4b8c1a3a9f0ccc1a9, type: 2}
   centerForce: 1
@@ -8044,8 +8044,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wingX: 3
   wingY: 0.8
-  liftFactor: 1.6
-  dragFactor: 2
+  liftFactor: 1
+  dragFactor: 1.2
   coefficients: {fileID: 11400000, guid: 73444ee070201de4f95e07fd5fc27cde, type: 2}
   centerForce: 0
 --- !u!1 &9153706073001557562
@@ -8431,8 +8431,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wingX: 3
   wingY: 0.8
-  liftFactor: 1.6
-  dragFactor: 2
+  liftFactor: 1
+  dragFactor: 1.2
   coefficients: {fileID: 11400000, guid: 73444ee070201de4f95e07fd5fc27cde, type: 2}
   centerForce: 0
 --- !u!1 &9153706073723657899
@@ -8688,7 +8688,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9215328247023613161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1696.6632, y: 5.1600003, z: 652.11}
+  m_LocalPosition: {x: 1696.6632, y: 5.25, z: 650.94}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8708,8 +8708,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wingX: 1.5
-  wingY: 12
-  liftFactor: 1.5
+  wingY: 14
+  liftFactor: 10
   dragFactor: 1
   coefficients: {fileID: 11400000, guid: 7ddeb214c6154ca4b8c1a3a9f0ccc1a9, type: 2}
   centerForce: 1

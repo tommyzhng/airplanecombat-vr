@@ -8,7 +8,7 @@ In the first month, I was able to create a foundation for a flight simulator, an
 [Latest Release (v0.01-alpha)](https://github.com/tommyzhng/AirplaneCombatVR/releases/tag/v0.01-alpha)
 ### Downloading Source Code 
 (Must have Blender Installed)
-- Head to latest release, download and unzip source_code.zip
+- Head to latest release, download and unzip source code zip file
 - Open unzipped folder in Unity
 
 ### Playing the Game
@@ -16,6 +16,8 @@ In the first month, I was able to create a foundation for a flight simulator, an
   - PC
   - Oculus Rift S
 - Unzip package, run "AirplaneCombatVR.exe"
+
+There is no goal of the game yet - but keybindings and controls can be seen from the "how to play" button in the main menu.
 
 ### Here are some videos highlighting the features that were coded in the game:
 

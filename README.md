@@ -23,7 +23,7 @@ There is no goal of the game yet - but keybindings and controls can be seen from
 
 Plane Selection (So far only F-16 should be chosen)
 
-https://user-images.githubusercontent.com/109367999/213570792-0066f138-9455-47f6-9993-3f4edccd1b47.mp4
+https://user-images.githubusercontent.com/109367999/215943932-a0442df4-3096-4295-87b3-7ea318122fee.mp4
 
 Control Surface Deflection:
 
@@ -31,9 +31,7 @@ https://user-images.githubusercontent.com/109367999/213570914-7ed3cb7e-40d5-4251
 
 Flight / HUD Display:
 
-https://user-images.githubusercontent.com/109367999/213732497-f1b9eca8-faf0-4282-897d-885400c765e6.mp4
-
-
+https://user-images.githubusercontent.com/109367999/215943955-68415521-bdac-4459-b133-c923fe8174b5.mp4
 
 Other (Not Finished):
 

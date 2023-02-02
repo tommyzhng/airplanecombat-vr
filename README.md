@@ -31,7 +31,7 @@ https://user-images.githubusercontent.com/109367999/213570914-7ed3cb7e-40d5-4251
 
 Flight / HUD Display:
 
-https://user-images.githubusercontent.com/109367999/215943955-68415521-bdac-4459-b133-c923fe8174b5.mp4
+https://user-images.githubusercontent.com/109367999/216223703-d9ae6ac5-9268-44a7-bf6a-dd9798f0cc7e.mp4
 
 Other (Not Finished):
 

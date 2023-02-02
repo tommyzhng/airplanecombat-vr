@@ -37,5 +37,5 @@ Other (Not Finished):
 
 Waypoint System:
 <p align="center">
-  <img height=80% width=100% src="https://github.com/tommyzhng/AirplaneCombatVR/blob/master/Assets/Other/waypointsystem.gif">
+  <img height=80% width=90% src="https://github.com/tommyzhng/AirplaneCombatVR/blob/master/Assets/Other/waypointsystem.gif">
 </p>

@@ -37,8 +37,5 @@ Other (Not Finished):
 
 Waypoint System:
 <p align="center">
-  <img src="https://github.com/tommyzhng/AirplaneCombatVR/blob/master/Assets/Other/waypointsystem.gif">
+  <img height=80% width=90% src="https://github.com/tommyzhng/AirplaneCombatVR/blob/master/Assets/Other/waypointsystem.gif">
 </p>
-
-
-**More videos coming soon (need access to VR headset to record)**

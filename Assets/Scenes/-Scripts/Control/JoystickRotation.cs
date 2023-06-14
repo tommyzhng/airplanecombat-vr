@@ -76,31 +76,34 @@ public class JoystickRotation : MonoBehaviour
 	//Mouse Control
 	public void MouseAxis(InputAction.CallbackContext mousePos)     //Set deflection based on mouse position - more accurate
 	{
-		Vector2 pos = mousePos.ReadValue<Vector2>();                //get vector 2 value from input
-		pos.x -= Screen.width / 2;
-		pos.y -= Screen.height / 2;
+		if (!Input.GetKey(KeyCode.V))
+		{
+			Vector2 pos = mousePos.ReadValue<Vector2>();                //get vector 2 value from input
+			pos.x -= Screen.width / 2;
+			pos.y -= Screen.height / 2;
 
-		if (!Input.GetMouseButton(0))
-		{
-			yaw = 0f;
-			horizontal = 2 * (Mathf.InverseLerp(-Screen.width / 2, Screen.width / 2, pos.x) - 0.5f);        //Inverse Lerp gives us how far along the 
-		}                                                                                                   //mouse is between the two values
-		else
-		{
-			horizontal = 0f;
-			yaw = 2 * (Mathf.InverseLerp(-Screen.width / 2, Screen.width / 2, pos.x) - 0.5f);
-		}
-		vertical = 2 * (Mathf.InverseLerp(-Screen.height / 2, Screen.height / 2, pos.y) - 0.5f);
+			if (!Input.GetMouseButton(0))
+			{
+				yaw = 0f;
+				horizontal = 2 * (Mathf.InverseLerp(-Screen.width / 2, Screen.width / 2, pos.x) - 0.5f);        //Inverse Lerp gives us how far along the 
+			}                                                                                                   //mouse is between the two values
+			else
+			{
+				horizontal = 0f;
+				yaw = 2 * (Mathf.InverseLerp(-Screen.width / 2, Screen.width / 2, pos.x) - 0.5f);
+			}
+			vertical = 2 * (Mathf.InverseLerp(-Screen.height / 2, Screen.height / 2, pos.y) - 0.5f);
 
-		if (pos.x > -150 & pos.x < 150 & pos.y > -10 & pos.y < 10)  //Deadzone where horizontal deflection is zero
-		{
-			transform.localEulerAngles = Vector3.zero;
+			if (pos.x > -150 & pos.x < 150 & pos.y > -10 & pos.y < 10)  //Deadzone where horizontal deflection is zero
+			{
+				transform.localEulerAngles = Vector3.zero;
+			}
+			else
+			{
+				transform.localEulerAngles = Vector3.Scale(new Vector3(horizontal, vertical, yaw), rot);
+			}
 		}
-		else
-		{
-			transform.localEulerAngles = Vector3.Scale(new Vector3(horizontal, vertical, yaw), rot);
-		}
-	}
+    }
 }
 
 

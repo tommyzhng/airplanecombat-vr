@@ -98,6 +98,15 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Mouse Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""60c350d6-7159-4cec-9531-72ae9738b8f2"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -298,6 +307,17 @@ public partial class @Control : IInputActionCollection2, IDisposable
                     ""action"": ""Rudder"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9337b8bf-fddb-4217-b629-040532e4916c"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mouse Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -314,6 +334,7 @@ public partial class @Control : IInputActionCollection2, IDisposable
         m_Plane_Throttle = m_Plane.FindAction("Throttle", throwIfNotFound: true);
         m_Plane_GroundBrake = m_Plane.FindAction("GroundBrake", throwIfNotFound: true);
         m_Plane_Spoilers = m_Plane.FindAction("Spoilers", throwIfNotFound: true);
+        m_Plane_MouseLook = m_Plane.FindAction("Mouse Look", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -381,6 +402,7 @@ public partial class @Control : IInputActionCollection2, IDisposable
     private readonly InputAction m_Plane_Throttle;
     private readonly InputAction m_Plane_GroundBrake;
     private readonly InputAction m_Plane_Spoilers;
+    private readonly InputAction m_Plane_MouseLook;
     public struct PlaneActions
     {
         private @Control m_Wrapper;
@@ -393,6 +415,7 @@ public partial class @Control : IInputActionCollection2, IDisposable
         public InputAction @Throttle => m_Wrapper.m_Plane_Throttle;
         public InputAction @GroundBrake => m_Wrapper.m_Plane_GroundBrake;
         public InputAction @Spoilers => m_Wrapper.m_Plane_Spoilers;
+        public InputAction @MouseLook => m_Wrapper.m_Plane_MouseLook;
         public InputActionMap Get() { return m_Wrapper.m_Plane; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -426,6 +449,9 @@ public partial class @Control : IInputActionCollection2, IDisposable
                 @Spoilers.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnSpoilers;
                 @Spoilers.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnSpoilers;
                 @Spoilers.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnSpoilers;
+                @MouseLook.started -= m_Wrapper.m_PlaneActionsCallbackInterface.OnMouseLook;
+                @MouseLook.performed -= m_Wrapper.m_PlaneActionsCallbackInterface.OnMouseLook;
+                @MouseLook.canceled -= m_Wrapper.m_PlaneActionsCallbackInterface.OnMouseLook;
             }
             m_Wrapper.m_PlaneActionsCallbackInterface = instance;
             if (instance != null)
@@ -454,6 +480,9 @@ public partial class @Control : IInputActionCollection2, IDisposable
                 @Spoilers.started += instance.OnSpoilers;
                 @Spoilers.performed += instance.OnSpoilers;
                 @Spoilers.canceled += instance.OnSpoilers;
+                @MouseLook.started += instance.OnMouseLook;
+                @MouseLook.performed += instance.OnMouseLook;
+                @MouseLook.canceled += instance.OnMouseLook;
             }
         }
     }
@@ -468,5 +497,6 @@ public partial class @Control : IInputActionCollection2, IDisposable
         void OnThrottle(InputAction.CallbackContext context);
         void OnGroundBrake(InputAction.CallbackContext context);
         void OnSpoilers(InputAction.CallbackContext context);
+        void OnMouseLook(InputAction.CallbackContext context);
     }
 }

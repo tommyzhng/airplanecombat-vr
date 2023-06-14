@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planePrefabs:
-  - {fileID: 9144553905612704464, guid: 1b875eebbff848b43a8a8e8ec9b9593e, type: 3}
+  - {fileID: 6499524844480289933, guid: 1b875eebbff848b43a8a8e8ec9b9593e, type: 3}
   - {fileID: 154930, guid: 5aa5f800458228449afea8a66013b2e4, type: 3}
   spawnLocation: {fileID: 1948843707}
   vrCam: {fileID: 2816020372796500932}
@@ -1121,6 +1121,7 @@ GameObject:
   - component: {fileID: 1299980414}
   - component: {fileID: 1299980416}
   - component: {fileID: 1299980415}
+  - component: {fileID: 1299980417}
   m_Layer: 0
   m_Name: PCview
   m_TagString: MainCamera
@@ -1194,6 +1195,21 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299980413}
   m_Enabled: 1
+--- !u!114 &1299980417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299980413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12d56de24fcd2a4aab6874778e7bc6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensX: 2
+  sensY: 1.5
+  Cam: {fileID: 2816020372796500932}
 --- !u!1 &1460110793
 GameObject:
   m_ObjectHideFlags: 0
@@ -6265,7 +6281,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2816020372796500930}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
@@ -6977,7 +6993,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2816020372796500934}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -7020,7 +7036,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2816020372796500928}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}

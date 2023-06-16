@@ -5,11 +5,7 @@ This is a repository for a virtual reality aircraft simulator that I programmed 
 In the first month, I was able to create a foundation for a flight simulator, and in August, I implemented it in virtual reality. Most of the physics were coded in July, including the adjustments to lift, drag. Confusing topics such as quaternions and euler angles came up during this stage of development. In August, summer school came to a close, enabling me to focus on the design and implementation into virtual reality using the Oculus SDK.
 
 ## Downloading / Playing Game
-[Latest Release (v0.01-alpha)](https://github.com/tommyzhng/AirplaneCombatVR/releases/tag/v0.01-alpha)
-### Downloading Source Code 
-(Must have Blender Installed)
-- Head to latest release, download and unzip source code zip file
-- Open unzipped folder in Unity
+[Latest Release (v0.0.1-alpha.1)](https://github.com/tommyzhng/AirplaneCombatVR/releases/tag/v0.0.1-alpha.1)
 
 ### Playing the Game
 - Head to latest release, download the required platform:
@@ -17,7 +13,20 @@ In the first month, I was able to create a foundation for a flight simulator, an
   - Oculus Rift S
 - Unzip package, run "AirplaneCombatVR.exe"
 
+### How To Play (PC)
+- WASD or Mouse: **Pitch and Roll**
+- Q/E or Mouse left click + pan: **Yaw**
+- Lshift/LCtrl: **Throttle Up/Down**
+- B: **Airbrake**
+- Space: **Ground Brakes**
+- V (Hold): **Look around with the mouse (mouse control disabled)**
+
 There is no goal of the game yet - but keybindings and controls can be seen from the "how to play" button in the main menu.
+
+### Downloading Source Code 
+(Must have Blender Installed)
+- Head to latest release, download and unzip source code zip file
+- Open unzipped folder in Unity
 
 ### Here are some videos highlighting the features that were coded in the game:
 

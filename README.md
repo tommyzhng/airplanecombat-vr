@@ -1,4 +1,4 @@
-# AirplaneCombatVR
+# Airplane Combat VR
 This is a repository for a virtual reality aircraft simulator that I programmed in the two months of my 2022 summer break.
 
 ### Project Development Progress
